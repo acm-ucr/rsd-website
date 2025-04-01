@@ -1,3 +1,13 @@
 @import "tailwindcss";
 
-@config '../../tailwind.config.ts';
+@theme {
+  --color-rsd-dark-blue: #03214f;
+  --color-rsd-mid-blue: #6694c9;
+  --color-rsd-light-blue: #cbe8ee;
+  --color-rsd-title-blue: #0040a5;
+  --color-rsd-yellow: #fccc71;
+  --color-rsd-gold: #ffb71e;
+
+  --font-rsd-main: "DM serif display", serif;
+  --font-rsd-alt: "Noticia text", serif;
+}
