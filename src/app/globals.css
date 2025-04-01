@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+serif+display:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noticia+text:wght@400;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -8,6 +10,6 @@
   --color-rsd-yellow: #fccc71;
   --color-rsd-gold: #ffb71e;
 
-  --font-rsd-main: "var(--dm-serif-display-font)";
-  --font-rsd-alt: "var(--noticia-text-font)";
+  --font-rsd-main: "DM serif display", serif;
+  --font-rsd-alt: "Noticia text", serif;
 }
