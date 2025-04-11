@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="flex w-full items-center justify-between bg-[#6694C9] px-5 py-4">
+    <div className="bg-rsd-mid-blue flex w-full items-center justify-between px-5 py-4">
       <Image src={logo} alt="RSD Logo" className="w-1/20" />
       <div className="mx-5 grid grid-flow-col gap-6 text-2xl text-white">
         {items.map(({ name, link }) => (
@@ -16,7 +16,7 @@ const Navbar = () => {
             key={name}
             href={link}
             className={`${
-              pathname === link ? "text-[#F7C55B]" : "hover:text-gray-300"
+              pathname === link ? "text-rsd-yellow" : "hover:text-gray-300"
             }`}
           >
             {name}
