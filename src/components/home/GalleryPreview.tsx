@@ -25,29 +25,31 @@ const GalleryPreview = () => {
   }, [api]);
 
   return (
-    <Carousel
-      opts={{
-        loop: true,
-      }}
-      setApi={setApi}
-      className="w-[70vw]"
-    >
-      <CarouselContent>
-        {slides.map((slide: slide) => (
-          <CarouselItem
-            key={slide.id}
-            className={`md:basis-1/3 ${current === slide.id ? "scale-[100%]" : "scale-[60%]"}`}
-          >
-            <Card className="bg-rsd-yellow">
-              <CardContent className="flex aspect-square items-center justify-center text-5xl">
-                {slide.id}
-              </CardContent>
-            </Card>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+    <div className="flex-wrap">
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        setApi={setApi}
+        className="w-[60vw] outline"
+      >
+        <CarouselContent>
+          {slides.map((slide: slide) => (
+            <CarouselItem
+              key={slide.id}
+              className={`md:basis-1/3 ${current === slide.id ? "scale-[100%]" : "scale-[60%]"} ${current === slide.id - 1 || current === slide.id + 1 || current === slide.id ? "visible" : "invisible"}`}
+            >
+              <Card className="bg-rsd-yellow">
+                <CardContent className="flex aspect-square items-center justify-center text-5xl">
+                  {slide.id}
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       <div className="flex justify-center space-x-4 py-4">
         {slides.map((_, index) => (
           <button
@@ -57,7 +59,7 @@ const GalleryPreview = () => {
           />
         ))}
       </div>
-    </Carousel>
+    </div>
   );
 };
 
