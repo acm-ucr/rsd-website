@@ -36,7 +36,7 @@ const GalleryPreview = () => {
         {slides.map((slide: slide) => (
           <CarouselItem
             key={slide.id}
-            className={`basis-1/1 lg:basis-1/3 ${current === slide.id ? "scale-[100%]" : "scale-[60%]"}`}
+            className={`md:basis-1/3 ${current === slide.id ? "scale-[100%]" : "scale-[60%]"}`}
           >
             <Card className="bg-rsd-yellow">
               <CardContent className="flex aspect-square items-center justify-center text-5xl">
