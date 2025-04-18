@@ -14,4 +14,4 @@ const About = () => {
   );
 };
 
-export default Page;
+export default About;
