@@ -1,5 +1,12 @@
+import StickersBox from "@/components/store/StickersBox";
+
 const Store = () => {
-  return <div>Store</div>;
+  return (
+    <div>
+      Store
+      <StickersBox />
+    </div>
+  );
 };
 
 export default Store;
