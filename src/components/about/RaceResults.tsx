@@ -10,9 +10,8 @@ import {
 import { slides, slide } from "@/data/ResultsInfo";
 
 const RaceResults = () => {
-
   return (
-    <div className="flex flex-col items-center bg-rsd-dark-blue py-15 px-5 rounded-4xl">
+    <div className="bg-rsd-dark-blue flex flex-col items-center rounded-4xl px-5 py-15">
       <Carousel
         opts={{
           loop: false,
@@ -21,22 +20,21 @@ const RaceResults = () => {
       >
         <CarouselContent>
           {slides.map((slide: slide) => (
-            <CarouselItem
-              key={slide.id}
-              className= "md:basis-1/3"
-            >
+            <CarouselItem key={slide.id} className="md:basis-1/3">
               <Card className="bg-rsd-dark-blue border-none shadow-none">
-                <CardContent className="flex aspect-square items-center justify-center flex-col font-rsd-alt font-bold">
-                <span className="text-rsd-yellow text-3xl">{slide.year}</span>
-                <span className="text-white text-lg">{slide.title}</span>
-                <span className="text-rsd-light-blue text-xs">{slide.subtitle}</span>
+                <CardContent className="font-rsd-alt flex aspect-square flex-col items-center justify-center font-bold">
+                  <span className="text-rsd-yellow text-3xl">{slide.year}</span>
+                  <span className="text-lg text-white">{slide.title}</span>
+                  <span className="text-rsd-light-blue text-xs">
+                    {slide.subtitle}
+                  </span>
                 </CardContent>
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-2 bg-transparent text-rsd-light-blue" />
-        <CarouselNext className="absolute right-2 bg-transparent text-rsd-light-blue" />
+        <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent" />
+        <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent" />
       </Carousel>
     </div>
   );
