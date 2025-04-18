@@ -1,4 +1,3 @@
-//import Image, { StaticImageData } from "next/image";
 interface InfoBoxProps {
   text: React.ReactNode;
 }
