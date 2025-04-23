@@ -3,7 +3,7 @@ interface HeaderProps {
 }
 const Header = ({ text }: HeaderProps) => {
   return (
-    <div className="my-8 w-full px-7 text-center">
+    <div className="m-8 w-full text-center">
       <div className="font-rsd-main text-rsd-title-blue text-[70px]">
         {text}
       </div>
