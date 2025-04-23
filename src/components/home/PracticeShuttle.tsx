@@ -1,7 +1,7 @@
 const PracticeShuttle = () => {
   return (
-    <div className="from-rsd-title-blue to bg-rsd-dark-blue flex h-4/12 w-full flex-col bg-radial">
-      <div className="font-rsd-alt flex justify-center gap-x-80 px-5 py-10 text-6xl font-normal text-white">
+    <div className="flex h-4/12 w-full flex-col bg-transparent bg-radial">
+      <div className="font-rsd-alt flex justify-between px-15 py-10 text-6xl font-normal text-white">
         <div>{"Saturday & Sunday"}</div>
         <div>{"10:00 am - 12:00 pm"}</div>
       </div>
