@@ -1,12 +1,5 @@
-import PastCard from "@/components/events/PastCard";
-import cloud from "@/public/cloud.webp";
-
 const Events = () => {
-  return (
-    <div className="bg-amber-500 p-10">
-      <PastCard eventName="hi" image={cloud} />
-    </div>
-  );
+  return <div>Events</div>;
 };
 
 export default Events;
