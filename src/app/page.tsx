@@ -1,9 +1,10 @@
 import Carousel from "@/components/home/GalleryPreview";
+import Example from "@/components/Example";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Carousel />
+    <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <Example />
     </div>
   );
 };
