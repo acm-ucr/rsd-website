@@ -31,7 +31,7 @@ const GalleryPreview = () => {
           loop: true,
         }}
         setApi={setApi}
-        className="w-[60vw]"
+        className="w-[60vw] outline"
       >
         <CarouselContent>
           {slides.map((slide: slide) => (
