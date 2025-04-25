@@ -22,7 +22,12 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "tailwind-merge": "^3.2.0",
+<<<<<<< HEAD
     "tw-animate-css": "^1.2.5"
+=======
+    "tw-animate-css": "^1.2.5",
+    "react-icons": "5.5.0"
+>>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
   },
   "devDependencies": {
     "@eslint/js": "9.23.0",

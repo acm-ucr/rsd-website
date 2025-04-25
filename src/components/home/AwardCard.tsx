@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import Award from "@/public/doublePaddle.webp";
 interface AwardCardProps {
@@ -14,6 +15,10 @@ const AwardCard = ({ AwardName }: AwardCardProps) => {
       </p>
     </div>
   );
+=======
+const AwardCard = () => {
+  return <div>AwardCard</div>;
+>>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
 };
 
 export default AwardCard;
