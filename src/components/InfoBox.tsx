@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const InfoBox = () => {
-  return <div>InfoBox</div>;
-=======
 interface InfoBoxProps {
   text: React.ReactNode;
 }
@@ -13,7 +9,6 @@ const InfoBox: React.FC<InfoBoxProps> = ({ text }) => {
       </div>
     </div>
   );
->>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
 };
 
 export default InfoBox;

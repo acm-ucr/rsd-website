@@ -1,7 +1,4 @@
 const PracticeShuttle = () => {
-<<<<<<< HEAD
-  return <div>PracticeShuttle</div>;
-=======
   return (
     <div className="flex h-4/12 w-full flex-col bg-transparent bg-radial">
       <div className="font-rsd-alt flex justify-between px-15 py-10 text-6xl font-normal text-white">
@@ -14,7 +11,6 @@ const PracticeShuttle = () => {
       </div>
     </div>
   );
->>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
 };
 
 export default PracticeShuttle;

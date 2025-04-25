@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const PastCard = () => {
-  return <div>PastCard</div>;
-=======
 import Image, { StaticImageData } from "next/image";
 interface ComponentProps {
   image: StaticImageData;
@@ -23,7 +19,6 @@ const PastCard = ({ eventName, image }: ComponentProps) => {
       </div>
     </div>
   );
->>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
 };
 
 export default PastCard;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const StickersBox = () => {
-  return <div>StickersBox</div>;
-=======
 import Image from "next/image";
 import DragonFrame from "@/public/store/dragonFrame.webp";
 
@@ -18,7 +14,6 @@ const StickersBox = () => {
       </div>
     </div>
   );
->>>>>>> cdd9360d4c6b9edf36b0f1466862060ef4cdc7e2
 };
 
 export default StickersBox;
