@@ -7,7 +7,7 @@ const Join = () => {
   return (
     <div className="bg-rsd-light-blue">
       <div className="relative my-20 flex justify-center">
-        <div className="absolute -top-[5vh] -left-[8vw]">
+        <div className="absolute -top-[5vh] -left-[16vw]">
           <Image src={Cloud} alt="Cloud" />
         </div>
         <InfoBox
@@ -28,7 +28,7 @@ const Join = () => {
             </div>
           }
         />
-        <div className="absolute -right-[4vw] bottom-0">
+        <div className="absolute -right-[10vw] bottom-0">
           <Image src={Cloud} alt="Cloud" />
         </div>
       </div>
