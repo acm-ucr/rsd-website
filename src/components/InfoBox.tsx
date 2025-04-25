@@ -1,11 +1,11 @@
 interface InfoBoxProps {
-  text: React.ReactNode;
+  text_button: React.ReactNode;
 }
-const InfoBox: React.FC<InfoBoxProps> = ({ text }) => {
+const InfoBox: React.FC<InfoBoxProps> = ({ text_button }) => {
   return (
-    <div className="my-8 w-full px-7 text-left">
+    <div className="my-8 w-3/4 px-7 text-left">
       <div className="font-rsd-alt bg-rsd-dark-blue rounded-4xl px-20 py-20 text-2xl font-bold text-white">
-        {text}
+        {text_button}
       </div>
     </div>
   );
