@@ -1,4 +1,3 @@
-import Carousel from "@/components/home/GalleryPreview";
 import Example from "@/components/Example";
 
 const Home = () => {
