@@ -15,7 +15,7 @@ const PastCard = ({ eventName, image }: ComponentProps) => {
         />
       </div>
       <div className="flex h-1/5 items-center justify-center rounded-b-2xl bg-white">
-        <div className="text-4xl">{eventName}</div>
+        <div className="text-4xl pb-4">{eventName}</div>
       </div>
     </div>
   );
