@@ -2,7 +2,7 @@ import Image from "next/image";
 import JoinDragon from "@/public/join/joinDragon.webp";
 import Cloud from "@/public/cloud.webp";
 import InfoBox from "@/components/InfoBox";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Join = () => {
@@ -24,11 +24,9 @@ const Join = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-                <Button className="bg-rsd-mid-blue mt-4 hover:bg-rsd-mid-blue rounded-4xl p-5">
-                  <Link href="/">
-                    Join Our Discord!
-                  </Link>
-                </Button>
+              <Button className="bg-rsd-mid-blue hover:bg-rsd-mid-blue mt-4 rounded-4xl p-5">
+                <Link href="/">Join Our Discord!</Link>
+              </Button>
             </div>
           }
         />
@@ -37,7 +35,11 @@ const Join = () => {
         </div>
       </div>
       <div className="relative mt-[10vh]">
-        <Image src={JoinDragon} alt="Dragon Riding a Wave" className = "object-fill w-full"/>
+        <Image
+          src={JoinDragon}
+          alt="Dragon Riding a Wave"
+          className="w-full object-fill"
+        />
       </div>
     </div>
   );
