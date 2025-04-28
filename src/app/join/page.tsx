@@ -24,7 +24,7 @@ const Join = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <Button className="bg-rsd-mid-blue hover:bg-rsd-mid-blue mt-4 rounded-4xl p-5">
+              <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-4 rounded-4xl p-7 text-2xl">
                 <Link href="/">Join Our Discord!</Link>
               </Button>
             </div>
