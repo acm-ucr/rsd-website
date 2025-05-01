@@ -22,7 +22,7 @@ const UpcomingEventsInfo = [
 const Events = () => {
   return (
     <div className="relative">
-      <Header text = "Upcoming Events"/>
+      <Header text="Upcoming Events" />
       <div className="mb-16 flex flex-wrap justify-center gap-y-8">
         {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
           <UpcomingCard
