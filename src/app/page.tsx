@@ -1,9 +1,9 @@
-import Carousel from "@/components/home/GalleryPreview";
+import PracticeWrapper from "@/components/home/PracticeWrapper";
 
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Carousel />
+      <PracticeWrapper />
     </div>
   );
 };
