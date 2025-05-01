@@ -1,5 +1,6 @@
 import Image from "next/image";
 import UpcomingCard from "@/components/events/UpcomingCard";
+import Header from "@/components/Header";
 import EventsWave from "@/public/events/eventsWave.webp";
 
 const UpcomingEventsInfo = [
@@ -21,12 +22,8 @@ const UpcomingEventsInfo = [
 const Events = () => {
   return (
     <div className="relative">
-      <div className="my-10 flex flex-wrap justify-center">
-        <header className="text-rsd-title-blue font-rsd-main text-5xl">
-          Upcoming Events
-        </header>
-      </div>
-      <div className="my-16 flex flex-wrap justify-center gap-y-8">
+      <Header text = "Upcoming Events"/>
+      <div className="mb-16 flex flex-wrap justify-center gap-y-8">
         {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
           <UpcomingCard
             key={index}
