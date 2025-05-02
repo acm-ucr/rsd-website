@@ -4,6 +4,7 @@ import Cloud from "@/public/cloud.webp";
 import InfoBox from "@/components/InfoBox";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Registration from "@/components/join/Registration";
 
 const Join = () => {
   return (
@@ -34,6 +35,8 @@ const Join = () => {
           <Image src={Cloud} alt="Cloud" />
         </div>
       </div>
+      <Registration />
+
       <div className="relative mt-[10vh]">
         <Image
           src={JoinDragon}
