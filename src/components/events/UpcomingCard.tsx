@@ -8,7 +8,7 @@ interface ComponentProps {
 const UpcomingCard = ({ month, date, name, desc }: ComponentProps) => {
   return (
     <div className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-3/5 rounded-4xl p-10 text-white shadow-md">
-      <div className="flex h-full w-1/3 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-10 text-center text-black">
+      <div className="flex w-1/3 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-10 text-center text-black">
         <div className="text-5xl">{month}</div>
         <div className="text-8xl">{date}</div>
       </div>
