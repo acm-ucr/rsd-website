@@ -27,7 +27,7 @@ const BoardCard = ({
       <Image
         src={image || RSDLogo}
         alt={name}
-        className="flex aspect-square flex-shrink-0 justify-center rounded-2xl object-fill"
+        className="flex aspect-square h-3/4 w-full flex-shrink-0 justify-center rounded-2xl object-cover"
       />
       <div className="font-rsd-alt flex flex-col items-center p-5 text-center font-bold">
         <div className="text-rsd-yellow flex text-4xl">{name}</div>
