@@ -1,16 +1,15 @@
 import Header from "@/components/Header";
 import InfoBox from "@/components/InfoBox";
 import Image from "next/image";
-import background from "@/public/about/dragon.webp";
+import Dragon from "@/public/about/dragon.webp";
 
 const History = () => {
   return (
-    <div className="relative flex h-3/4 w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-3/4 w-full pb-25 flex-col items-center justify-center overflow-hidden">
       <Image
-        src={background}
+        src={Dragon}
         alt="Dragon Boat Background"
-        fill
-        className="absolute top-0 left-0 z-0 translate-y-20 object-cover"
+        className="absolute w-full h-full top-20 left-0 z-0 object-cover"
       />
       <div className="z-10 flex w-full flex-col items-center px-6 py-14 text-center">
         <Header text="History of Dragon Boat" />
