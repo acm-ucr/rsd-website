@@ -5,11 +5,11 @@ import Dragon from "@/public/about/dragon.webp";
 
 const History = () => {
   return (
-    <div className="relative flex h-3/4 w-full pb-25 flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-3/4 w-full flex-col items-center justify-center overflow-hidden pb-25">
       <Image
         src={Dragon}
         alt="Dragon Boat Background"
-        className="absolute w-full h-full top-20 left-0 z-0 object-cover"
+        className="absolute bottom-0 left-0 z-0 w-full object-cover"
       />
       <div className="z-10 flex w-full flex-col items-center px-6 py-14 text-center">
         <Header text="History of Dragon Boat" />
