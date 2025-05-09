@@ -5,7 +5,7 @@ import { StaticImageData } from "next/image";
 interface GalleryInfo {
   photoName: string;
   link: string;
-  image: string | StaticImageData;
+  image: StaticImageData;
 }
 
 const GalleryCard = ({ photoName, link, image }: GalleryInfo) => {
