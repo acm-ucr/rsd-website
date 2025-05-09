@@ -11,7 +11,7 @@ const AwardCard = ({ AwardName }: AwardCardProps) => {
         alt="Award"
         className="bg-rsd-light-blue mask-radial-at-center h-30 w-30 -translate-y-4 rounded-full"
       />
-      <p className="font-rsd-alt text-rsd-title-blue -mt-10 text-center text-2xl font-bold">
+      <p className="font-rsd-alt text-rsd-title-blue text-med -mt-10 text-center font-bold">
         {AwardName}
       </p>
     </div>
