@@ -1,11 +1,13 @@
+"use client";
 import Header from "@/components/Header";
 import InfoBox from "@/components/InfoBox";
+import {motion} from "motion/react";
 
 const ImportantEvents = () => {
   return (
     <div className="flex h-full w-screen flex-col items-center">
       <Header text="Important Events" />
-      <div className="flex w-5/6 justify-center">
+      <motion.div className="flex w-5/6 justify-center" whileInView={{opacity: 1, skewX: 0}} transition={{duration: 0.5}} whileHover={{scale: 1.05}} initial={{opacity: 0, scale: 1, skewX: -50}}>
         <InfoBox
           text={
             <div className="flex flex-col items-center gap-10">
@@ -24,7 +26,7 @@ const ImportantEvents = () => {
             </div>
           }
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
