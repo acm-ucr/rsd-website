@@ -5,9 +5,9 @@ import ProductCard from "@/components/store/ProductCard";
 const Store = () => {
   return (
     <div>
-      <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <div className="flex w-screen flex-col items-center justify-center">
         <Header text="Featured Products" />
-        <div className="flex h-screen w-screen items-center justify-center">
+        <div className="flex items-center justify-center">
           <ProductCard productName="Shirt" productPrice="17.99$" />
           <ProductCard productName="Jacket" productPrice="29.99$" />
         </div>
