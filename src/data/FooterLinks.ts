@@ -9,5 +9,9 @@ export const footerLinks = [
     icon: FaInstagram,
     url: "https://instagram.com/rsd_dragonboat",
   },
-  { name: "Youtube", icon: FaYoutube, url: "https://youtube.com/@riversidesurgingdragons7640" },
+  {
+    name: "Youtube",
+    icon: FaYoutube,
+    url: "https://youtube.com/@riversidesurgingdragons7640",
+  },
 ];
