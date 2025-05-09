@@ -1,16 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import footerImage from "@/public/RSDLogo.webp";
 
 import { footerLinks } from "@/data/FooterLinks";
-
-const footerImage = "/RSDLogo.webp";
-
-footerLinks.map((link) => (
-  <a href={link.url}>
-    <link.icon className="h-6 w-6 transition-transform hover:scale-110" />
-    {link.name}
-  </a>
-));
 
 const Footer = () => {
   return (

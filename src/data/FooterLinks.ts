@@ -1,7 +1,8 @@
-import { FaInstagram, FaDiscord, FaEnvelope, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaYoutube } from "react-icons/fa";
+import { Mail } from "lucide-react";
 
 export const footerLinks = [
-  { name: "Mail", icon: FaEnvelope, url: "mailto:rsd.dragonboat@gmail.com" },
+  { name: "Mail", icon: Mail, url: "mailto:rsd.dragonboat@gmail.com" },
   { name: "Discord", icon: FaDiscord, url: "https://discord.gg/czUqmCBHnm" },
   {
     name: "Instagram",
