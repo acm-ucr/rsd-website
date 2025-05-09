@@ -21,7 +21,7 @@ const UpcomingEventsInfo = [
 
 const Events = () => {
   return (
-    <div className="relative">
+    <div className="relative flex flex-col items-center">
       <Header text="Upcoming Events" />
       <div className="mb-16 flex flex-col items-center gap-8 px-10 md:px-0">
         {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
