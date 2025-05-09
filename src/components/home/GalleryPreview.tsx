@@ -14,12 +14,15 @@ import { slides, slide } from "@/data/GalleryImages";
 const GalleryPreview = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const totalSlides = slides.length;
 
   useEffect(() => {
     if (!api) {
+      console.log("Initialize API");
       return;
     }
     api.on("select", () => {
+      console.log("API initialized");
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
@@ -31,23 +34,31 @@ const GalleryPreview = () => {
           loop: true,
         }}
         setApi={setApi}
-        className="w-[60vw] outline"
+        className="w-[90vw]"
       >
-        <CarouselContent>
-          {slides.map((slide: slide) => (
+        <CarouselPrevious />
+        <CarouselContent className="relative w-[95vw]">
+          {slides.map((slide: slide, index: number) => (
             <CarouselItem
               key={slide.id}
-              className={`md:basis-1/3 ${current === slide.id ? "scale-[100%]" : "scale-[60%]"} ${current === slide.id - 1 || current === slide.id + 1 || current === slide.id ? "visible" : "invisible"}`}
+              className={`lg:basis-1/3 ${
+                current === (index - 1 + totalSlides) % totalSlides ||
+                current === (index + 1) % totalSlides ||
+                current === index
+                  ? "visible flex justify-center"
+                  : "invisible"
+              } `}
             >
-              <Card className="bg-rsd-yellow">
-                <CardContent className="flex aspect-square items-center justify-center text-5xl">
+              <Card
+                className={`bg-rsd-yellow w-11/12 ${current === index ? "scale-[100%]" : "scale-[75%]"}`}
+              >
+                <CardContent className="flex aspect-square items-center justify-center text-6xl">
                   {slide.id}
                 </CardContent>
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
         <CarouselNext />
       </Carousel>
       <div className="flex justify-center space-x-4 py-4">
