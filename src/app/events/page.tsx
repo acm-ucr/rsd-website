@@ -6,9 +6,6 @@ import PastCard from "@/components/events/PastCard";
 import Cloud from "@/public/cloud.webp";
 import logo from "@/public/RSDLogo.webp";
 
-import { events } from "@/data/PastEvents";
-
-
 const UpcomingEventsInfo = [
   //Temporary Array of data, just for visualization
   {
@@ -55,20 +52,9 @@ const Events = () => {
           <Header text="Past Events" />
         </div>
         <div className="flex justify-center gap-10 [&>*:nth-child(even)]:mt-40">
-         
-          <PastCard  
-                eventName= "eventName"
-                image= {logo}
-              />
-          <PastCard  
-            eventName= "eventName"
-            image= {logo}
-          />
-          <PastCard  
-            eventName= "eventName"
-            image= {logo}
-          />
-    
+          <PastCard eventName="eventName" image={logo} />
+          <PastCard eventName="eventName" image={logo} />
+          <PastCard eventName="eventName" image={logo} />
         </div>
         <div className="absolute bottom-0 -left-30">
           <Image src={Cloud} alt="cloud" className="w-3/4" />
