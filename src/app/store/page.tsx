@@ -4,6 +4,7 @@ import ProductCard from "@/components/store/ProductCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import storeWave from "@/public/store/storeWave.webp";
+import Cloud from "@/public/cloud.webp";
 import Link from "next/link";
 
 const Store = () => {
@@ -19,6 +20,16 @@ const Store = () => {
           src={storeWave}
           alt="store wave background"
           className="absolute bottom-4 left-0 -z-10 w-full object-cover"
+        />
+        <Image
+          src={Cloud}
+          alt="store wave background"
+          className="absolute bottom-20 -left-25 -z-10 h-1/8 w-1/5"
+        />
+        <Image
+          src={Cloud}
+          alt="store wave background"
+          className="absolute -right-20 bottom-82 -z-10 w-1/6 scale-x-[-1]"
         />
         <Button className="font-rsd-alt rounded-full bg-[#485D8A] p-15 text-center text-5xl font-bold text-white">
           <Link href="/">order form!</Link>
