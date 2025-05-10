@@ -25,7 +25,7 @@ const Store = () => {
           {/* Could not find a current link to merch, only old link */}
         </Button>
       </div>
-      <div>
+      <div className="relative">
         <Header text="Stickers?" />
         <StickersBox />
       </div>
