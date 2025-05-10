@@ -1,14 +1,15 @@
 import StickersBox from "@/components/store/StickersBox";
 import Header from "@/components/Header";
 import ProductCard from "@/components/store/ProductCard";
-import { Button } from "@/components/ui/button"
-import Image from "next/image"; 
-import storeWave from "@/public/store/storeWave.webp"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import storeWave from "@/public/store/storeWave.webp";
+import Link from "next/link";
 
 const Store = () => {
   return (
     <div>
-      <div className="relative flex w-screen flex-col items-center justify-center pb-43">
+      <div className="relative flex w-screen flex-col items-center justify-center pb-47">
         <Header text="Featured Products" />
         <div className="flex items-center justify-center">
           <ProductCard productName="Shirt" productPrice="17.99$" />
@@ -17,9 +18,12 @@ const Store = () => {
         <Image
           src={storeWave}
           alt="store wave background"
-          className="absolute bottom-0 left-0 z-0 w-full object-cover"
+          className="absolute bottom-0 left-0 -z-10 w-full object-cover"
         />
-        <Button />
+        <Button className="font-rsd-alt rounded-full bg-[#485D8A] p-15 text-center text-5xl font-bold text-white">
+          <Link href="/">order form!</Link>
+          {/* Could not find a current link to merch, only old link */}
+        </Button>
       </div>
       <div>
         <Header text="Stickers?" />
