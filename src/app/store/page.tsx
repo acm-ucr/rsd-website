@@ -18,7 +18,7 @@ const Store = () => {
         <Image
           src={storeWave}
           alt="store wave background"
-          className="absolute bottom-0 left-0 -z-10 w-full object-cover"
+          className="absolute bottom-4 left-0 -z-10 w-full object-cover"
         />
         <Button className="font-rsd-alt rounded-full bg-[#485D8A] p-15 text-center text-5xl font-bold text-white">
           <Link href="/">order form!</Link>
