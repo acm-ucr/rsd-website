@@ -1,5 +1,11 @@
+import BoardMapping from "@/components/board/BoardMapping";
+
 const Board = () => {
-  return <div>Board</div>;
+  return (
+    <div>
+      <BoardMapping />
+    </div>
+  );
 };
 
 export default Board;
