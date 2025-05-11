@@ -56,12 +56,16 @@ const Events = () => {
           <PastCard eventName="eventName" image={logo} />
           <PastCard eventName="eventName" image={logo} />
         </div>
-        <div className="absolute bottom-0 -left-30">
-          <Image src={Cloud} alt="cloud" className="w-3/4" />
-        </div>
-        <div className="absolute -right-50 bottom-0">
-          <Image src={Cloud} alt="cloud" className="w-3/4" />
-        </div>
+        <Image
+          src={Cloud}
+          alt="cloud"
+          className="absolute bottom-0 -left-30 w-1/4"
+        />
+        <Image
+          src={Cloud}
+          alt="cloud"
+          className="absolute -right-30 bottom-0 w-1/4"
+        />
       </div>
     </div>
   );
