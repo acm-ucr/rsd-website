@@ -14,7 +14,7 @@ const NotFound = () => {
       </div>
       <Button
         asChild
-        className="bg-rsd-mid-blue/40 flex h-1/15 w-1/7 rounded-full px-25 py-5 text-2xl shadow-xl hover:bg-gray-600"
+        className="bg-rsd-button-blue flex h-1/15 w-1/7 rounded-full px-25 py-5 text-2xl shadow-xl hover:bg-blue-900"
       >
         <Link href="/">Go Back Home</Link>
       </Button>
