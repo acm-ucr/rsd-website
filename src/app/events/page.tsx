@@ -38,13 +38,11 @@ const Events = () => {
             />
           ))}
         </div>
-        <div className="absolute -bottom-40">
-          <Image
-            src={EventsWave}
-            alt="Waves with Oars"
-            className="w-screen object-fill"
-          />
-        </div>
+        <Image
+          src={EventsWave}
+          alt="Waves with Oars"
+          className="absolute -bottom-40 w-screen object-fill"
+        />
       </div>
 
       <div className="relative flex flex-col pb-20">
