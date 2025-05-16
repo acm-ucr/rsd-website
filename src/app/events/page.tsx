@@ -2,6 +2,9 @@ import Image from "next/image";
 import UpcomingCard from "@/components/events/UpcomingCard";
 import Header from "@/components/Header";
 import EventsWave from "@/public/events/eventsWave.webp";
+import PastCard from "@/components/events/PastCard";
+import Cloud from "@/public/cloud.webp";
+import logo from "@/public/RSDLogo.webp";
 
 const UpcomingEventsInfo = [
   //Temporary Array of data, just for visualization
@@ -21,24 +24,45 @@ const UpcomingEventsInfo = [
 
 const Events = () => {
   return (
-    <div className="relative flex flex-col items-center">
-      <Header text="Upcoming Events" />
-      <div className="mb-16 flex flex-col items-center gap-8 px-10 md:px-0">
-        {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
-          <UpcomingCard
-            key={index}
-            month={Month}
-            date={Date}
-            name={Name}
-            desc={Desc}
-          />
-        ))}
-      </div>
-      <div className="absolute bottom-0">
+    <div>
+      <div className="relative">
+        <Header text="Upcoming Events" />
+        <div className="mb-16 flex flex-wrap justify-center gap-y-8">
+          {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
+            <UpcomingCard
+              key={index}
+              month={Month}
+              date={Date}
+              name={Name}
+              desc={Desc}
+            />
+          ))}
+        </div>
         <Image
           src={EventsWave}
           alt="Waves with Oars"
-          className="w-screen object-fill"
+          className="absolute -bottom-40 w-screen object-fill"
+        />
+      </div>
+
+      <div className="relative flex flex-col pb-20">
+        <div className="mt-20">
+          <Header text="Past Events" />
+        </div>
+        <div className="flex justify-center gap-10 [&>*:nth-child(even)]:mt-40">
+          <PastCard eventName="eventName" image={logo} />
+          <PastCard eventName="eventName" image={logo} />
+          <PastCard eventName="eventName" image={logo} />
+        </div>
+        <Image
+          src={Cloud}
+          alt="cloud"
+          className="absolute bottom-0 -left-30 w-1/4"
+        />
+        <Image
+          src={Cloud}
+          alt="cloud"
+          className="absolute -right-30 bottom-0 w-1/4"
         />
       </div>
     </div>
