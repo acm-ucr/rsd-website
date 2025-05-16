@@ -7,14 +7,14 @@ interface ComponentProps {
 
 const UpcomingCard = ({ month, date, name, desc }: ComponentProps) => {
   return (
-    <div className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-3/5 rounded-4xl p-10 text-white shadow-md">
-      <div className="flex h-full w-1/3 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-10 text-center text-black">
-        <div className="text-5xl">{month}</div>
-        <div className="text-8xl">{date}</div>
+    <div className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-full rounded-4xl p-10 text-white shadow-md md:w-3/5">
+      <div className="flex w-2/5 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-4 text-center text-black md:w-1/3 md:p-10">
+        <div className="text-xl md:text-4xl">{month}</div>
+        <div className="text-3xl md:text-7xl">{date}</div>
       </div>
-      <div className="mt-8 flex h-full w-2/3 shrink-0 flex-col items-start gap-y-8 p-10 text-left text-white">
-        <div className="text-5xl font-bold">{name}</div>
-        <div className="text-xl font-bold">{desc}</div>
+      <div className="mt-8 flex h-full w-2/3 shrink-0 flex-col items-start gap-y-8 p-5 text-left text-white md:p-10">
+        <div className="text-xl font-bold md:text-5xl">{name}</div>
+        <div className="text-sm font-bold md:text-xl">{desc}</div>
       </div>
     </div>
   );

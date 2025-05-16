@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`flex min-h-screen w-screen flex-col overflow-x-hidden ${noticia.className} ${dmSerifDisplay.className}`}
+        className={`bg-rsd-light-blue flex min-h-screen w-screen flex-col overflow-x-hidden ${noticia.className} ${dmSerifDisplay.className}`}
       >
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
