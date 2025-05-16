@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-rsd-mid-blue flex w-full flex-row flex-wrap items-center justify-between px-5 py-4 outline">
+    <div className="bg-rsd-mid-blue flex w-full flex-row flex-wrap items-center justify-between px-5 py-4">
       <Link href="/" onClick={closeMenu}>
         <Image src={logo} alt="RSD Logo" className="w-[20vw] md:w-[6vw]" />
       </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center outline duration-1 hover:scale-110 md:hidden"
+        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center duration-1 hover:scale-110 md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
