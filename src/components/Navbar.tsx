@@ -29,9 +29,8 @@ const Navbar = () => {
 
       <div className="mx-5 hidden grid-flow-col gap-6 text-2xl text-white md:grid">
         {items.map(({ name, link }) => (
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }} key={name}>
             <Link
-              key={name}
               href={link}
               className={`${
                 pathname === link ? "text-rsd-yellow" : "hover:text-rsd-yellow"
