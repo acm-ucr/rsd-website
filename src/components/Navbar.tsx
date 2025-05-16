@@ -5,6 +5,7 @@ import logo from "@/public/RSDLogo.webp";
 import { items } from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,21 +21,25 @@ const Navbar = () => {
 
   return (
     <div className="bg-rsd-mid-blue flex w-full flex-row flex-wrap items-center justify-between px-5 py-4">
-      <Link href="/" onClick={closeMenu}>
-        <Image src={logo} alt="RSD Logo" className="w-[20vw] md:w-[6vw]" />
-      </Link>
+      <motion.div whileHover={{ scale: 1.2 }}>
+        <Link href="/" onClick={closeMenu}>
+          <Image src={logo} alt="RSD Logo" className="w-[20vw] md:w-[6vw]" />
+        </Link>
+      </motion.div>
 
       <div className="mx-5 hidden grid-flow-col gap-6 text-2xl text-white md:grid">
         {items.map(({ name, link }) => (
-          <Link
-            key={name}
-            href={link}
-            className={`${
-              pathname === link ? "text-rsd-yellow" : "hover:text-gray-300"
-            }`}
-          >
-            {name}
-          </Link>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Link
+              key={name}
+              href={link}
+              className={`${
+                pathname === link ? "text-rsd-yellow" : "hover:text-rsd-yellow"
+              }`}
+            >
+              {name}
+            </Link>
+          </motion.div>
         ))}
       </div>
 
@@ -45,20 +50,20 @@ const Navbar = () => {
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             openMenu
-              ? "translate-y-2.5 rotate-45 bg-black"
-              : "-translate-y-0.5 bg-black"
+              ? "bg-rsd-dark-blue translate-y-2.5 rotate-45"
+              : "bg-rsd-dark-blue -translate-y-0.5"
           }`}
         />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            openMenu ? "opacity-0" : "bg-black opacity-100"
+            openMenu ? "opacity-0" : "bg-rsd-dark-blue opacity-100"
           }`}
         />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             openMenu
-              ? "-translate-y-2.5 -rotate-45 bg-black"
-              : "translate-y-0.5 bg-black"
+              ? "bg-rsd-dark-blue -translate-y-2.5 -rotate-45"
+              : "bg-rsd-dark-blue translate-y-0.5"
           }`}
         />
       </button>
@@ -75,7 +80,7 @@ const Navbar = () => {
             key={name}
             href={link}
             className={`${
-              pathname === link ? "text-rsd-yellow" : "hover:text-gray-300"
+              pathname === link ? "text-rsd-yellow" : "hover:text-rsd-yellow"
             }`}
             onClick={closeMenu}
           >
