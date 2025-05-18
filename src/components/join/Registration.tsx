@@ -10,10 +10,10 @@ const Registration = () => {
         Fee Information
       </div>
       <div className="relative flex justify-center">
-        <div className="absolute top-10 left-25">
+        <div className="absolute top-10 left-0.5 sm:left-1 lg:left-5 xl:left-10">
           <Image src={Star4Point} alt="Four Point Star" width={130} />
         </div>
-        <div className="absolute right-25 bottom-20">
+        <div className="absolute right-0.5 bottom-30 sm:right-1 lg:right-5 xl:right-10">
           <Image src={Star4Point} alt="Four Point Star" className="w-3/4" />
         </div>
         <InfoBox
