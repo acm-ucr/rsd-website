@@ -8,7 +8,7 @@ const OtherEvents = () => {
     <div className="relative pb-10">
       <Image src={wave} alt="wave" className="absolute bottom-0 w-screen" />
       <div className="relative z-10">
-        <div className="text-rsd-button-blue font-rsd-alt flex justify-center pb-10 text-3xl font-bold">
+        <div className="text-rsd-button-blue font-rsd-alt flex justify-center pb-10 text-5xl font-bold">
           Other Events
         </div>
         <div className="flex items-center justify-center gap-15 pb-10">
