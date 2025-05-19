@@ -16,8 +16,6 @@ const Home = () => {
         <PracticeWrapper />
       </div>
 
-     
-
       <Carousel />
     </div>
   );
