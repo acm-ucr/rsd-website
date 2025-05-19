@@ -28,15 +28,14 @@ const GalleryPreview = () => {
   }, [api]);
 
   return (
-    <div className="flex-wrap">
+    <div className="relative flex-wrap">
       <Carousel
         opts={{
           loop: true,
         }}
         setApi={setApi}
-        className="w-[90vw]"
+        className="left-4 flex w-[90vw] lg:left-0"
       >
-        <CarouselPrevious />
         <CarouselContent className="relative w-[95vw]">
           {slides.map((slide: slide, index: number) => (
             <CarouselItem
@@ -59,13 +58,16 @@ const GalleryPreview = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselNext />
+        <div className="hidden lg:flex">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
       </Carousel>
       <div className="flex justify-center space-x-4 py-4">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`h-5 w-5 rounded-full ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
+            className={`h-10 w-10 rounded-full lg:h-5 lg:w-5 ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
             onClick={() => api?.scrollTo(index)}
           />
         ))}
