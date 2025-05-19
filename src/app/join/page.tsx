@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 
 const Join = () => {
   return (
-    <div className="bg-rsd-light-blue">
+    <div className="bg-rsd-light-blue overflow-x-hidden">
       <Header text="Registration" />
       <div className="relative my-10 flex justify-center">
         <div className="mid:scale-100 invisible absolute -top-[10vh] -left-[16vw] sm:visible sm:-top-[8vh] sm:-left-[35vw] sm:scale-80 lg:-left-[25vw] xl:-left-[16vw]">
@@ -33,7 +33,7 @@ const Join = () => {
             </div>
           }
         />
-        <div className="mid:scale-100 mid:-right-[29vw] invisible absolute -right-[10vw] -bottom-5 sm:visible sm:-right-[35vw] sm:scale-80 xl:-right-[10vw]">
+        <div className="mid:scale-100 mid:-right-[15vw] invisible absolute -right-[10vw] -bottom-5 sm:visible sm:-right-[35vw] sm:scale-80 lg:-right-[10vw] 2xl:-right-[5vw]">
           <Image src={Cloud} alt="Cloud" />
         </div>
       </div>

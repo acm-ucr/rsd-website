@@ -6,7 +6,7 @@ import { items } from "@/data/FeeLabels";
 const Registration = () => {
   return (
     <div className="flex flex-col">
-      <div className="text-rsd-title-blue text-center text-6xl">
+      <div className="text-rsd-title-blue text-center text-6xl sm:text-7xl">
         Fee Information
       </div>
       <div className="relative flex justify-center">
