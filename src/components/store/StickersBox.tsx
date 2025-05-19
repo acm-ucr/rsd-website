@@ -15,7 +15,7 @@ const StickersBox = () => {
           <Image
             src={stickerWave}
             alt="sticker wave background"
-            className="absolute bottom-0 left-0 z-10 w-full object-cover rounded-3xl"
+            className="absolute bottom-0 left-0 z-10 w-full rounded-3xl object-cover"
           />
         </div>
         <Image

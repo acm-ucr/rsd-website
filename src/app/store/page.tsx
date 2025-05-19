@@ -32,7 +32,7 @@ const Store = () => {
             alt="store wave background"
             className="absolute -right-20 bottom-83 -z-10 w-1/6 scale-x-[-1]"
           />
-          <Button className="font-rsd-alt rounded-full bg-rsd-title-blue hover:bg-blue-900 p-15 text-center text-5xl font-bold text-white">
+          <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-15 text-center text-5xl font-bold text-white hover:bg-blue-900">
             <Link href="/">order form!</Link>
             {/* Could not find a current link to merch, only old link */}
           </Button>
