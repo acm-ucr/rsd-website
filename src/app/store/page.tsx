@@ -16,7 +16,7 @@ const Store = () => {
           <ProductCard productName="Shirt" productPrice="17.99$" />
           <ProductCard productName="Jacket" productPrice="29.99$" />
         </div>
-        <div className="relative flex w-screen items-center justify-center pt-7.5 pb-47">
+        <div className="relative flex w-screen items-center justify-center pt-7.5 pb-[22vh]">
           <Image
             src={storeWave}
             alt="store wave background"
@@ -25,14 +25,14 @@ const Store = () => {
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute bottom-20 -left-25 -z-10 h-1/2 w-1/5"
+            className="absolute bottom-20 -left-25 -z-10 w-1/5"
           />
           <Image
             src={Cloud}
             alt="store wave background"
             className="absolute -right-20 bottom-83 -z-10 w-1/6 scale-x-[-1]"
           />
-          <Button className="font-rsd-alt rounded-full bg-[#485D8A] p-15 text-center text-5xl font-bold text-white">
+          <Button className="font-rsd-alt rounded-full bg-rsd-title-blue hover:bg-blue-900 p-15 text-center text-5xl font-bold text-white">
             <Link href="/">order form!</Link>
             {/* Could not find a current link to merch, only old link */}
           </Button>
