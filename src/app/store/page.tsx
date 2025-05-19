@@ -25,7 +25,7 @@ const Store = () => {
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute bottom-20 -left-25 -z-10 h-1/2 w-1/5"
+            className="absolute bottom-20 -left-25 -z-10 w-1/5"
           />
           <Image
             src={Cloud}
