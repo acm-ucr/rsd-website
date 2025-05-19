@@ -19,7 +19,19 @@ const Awards: Award[] = [
     image: Awardlogo,
   },
   {
-    name: "2018 College Cup Mixed 1st place B Division",
+    name: "2019 College Cup Mixed 3rd place B Division",
+    image: Awardlogo,
+  },
+  {
+    name: "2022 College Cup Mixed 2nd place B Division",
+    image: Awardlogo,
+  },
+  {
+    name: "2023 College Cup Mixed 1st place B Division",
+    image: Awardlogo,
+  },
+  {
+    name: "2024 Arizona Dragon Boat Festival 2nd place C Division",
     image: Awardlogo,
   },
 ];

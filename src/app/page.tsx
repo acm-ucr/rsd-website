@@ -4,10 +4,6 @@ import AwardsMapped from "@/components/home/AwardsMapped";
 const Home = () => {
   return (
     <div className="flex h-1/2 w-screen flex-col items-center justify-center">
-      <div className="flex pb-100">
-        <PracticeWrapper />
-      </div>
-
       <div className="mt-10 mb-10 flex w-3/5 items-center justify-center">
         <iframe
           src="https://www.youtube.com/embed/Xs0hR3QIQNE?si=qkDfhaD82i5ogqoe"
@@ -16,6 +12,11 @@ const Home = () => {
       </div>
       <AwardsMapped />
       <div></div>
+      <div className="flex pb-100">
+        <PracticeWrapper />
+      </div>
+
+     
 
       <Carousel />
     </div>

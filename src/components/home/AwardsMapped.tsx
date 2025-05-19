@@ -1,14 +1,13 @@
 import Award from "@/data/AwardsInfo";
 import AwardCard from "@/components/home/AwardCard";
+import Header from "../Header";
 const AwardsMapped = () => {
   return (
     <div className="flex flex-col items-center">
       <div>
-        <p className="font-rsd-alt text-rsd-title-blue text-center text-4xl font-bold">
-          {"Awards & Recognition"}
-        </p>
+        <Header text="Awards and Recognition" />
       </div>
-      <div className="mb-40 flex flex-row flex-wrap justify-center">
+      <div className="mb-40 grid grid-cols-8 gap-5 justify-center ">
         {Award.map((award, index) => (
           <AwardCard key={index} AwardName={award.name} />
         ))}
