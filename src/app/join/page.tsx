@@ -12,13 +12,12 @@ const Join = () => {
     <div className="bg-rsd-light-blue overflow-x-hidden">
       <Header text="Registration" />
       <div className="relative my-10 flex justify-center">
-        <div className="mid:scale-100 invisible absolute -top-[10vh] -left-[16vw] sm:visible sm:-top-[8vh] sm:-left-[35vw] sm:scale-80 lg:-left-[25vw] xl:-left-[16vw]">
+        <div className="2xl:scale-100 invisible absolute -top-[10vh] -left-[16vw] sm:visible sm:-top-[12vh] sm:-left-[35vw] sm:scale-70 lg:-top-[12vh] lg:-left-[25vw] lg:scale-80 xl:scale-90 xl:-left-[16vw] 2xl:-top-[10vh]">
           <Image src={Cloud} alt="Cloud" />
         </div>
         <InfoBox
           text={
             <div className="flex flex-col items-center justify-center text-center">
-              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -26,8 +25,7 @@ const Join = () => {
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-5 rounded-4xl p-7 text-xl sm:text-2xl xl:p-8 xl:text-3xl">
+              <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-5 rounded-4xl p-7 text-lg sm:text-xl mid:text-xl xl:p-8 xl:text-3xl">
                 <Link href="/">Join Our Discord!</Link>
               </Button>
             </div>
