@@ -18,30 +18,27 @@ const PracticeWrapper = () => {
         <Image
           src={Wave}
           alt="Wave"
-          className="absolute -z-10 flex h-full w-full object-fill xl:-top-[20vh] xl:h-fit"
+          className="absolute -z-10 hidden h-full w-full object-fill lg:flex lg:h-fit xl:-top-[20vh]"
         />
-        <div className="flex w-full flex-row flex-wrap px-8 xl:flex-nowrap xl:px-10">
-          <div className="flex w-full justify-center xl:w-3/4">
+        <div className="flex flex-col flex-wrap px-8 md:items-center xl:flex-row xl:flex-nowrap xl:items-stretch xl:px-10">
+          <div className="flex justify-center xl:w-3/4">
             <InfoBox
               text={
-                <div className="text-center text-base xl:text-3xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                <div className="flex h-full items-center text-center text-base xl:text-4xl">
+                  RSD holds weekend practices at Mother's Beach in Long Beach
+                  every Saturday and Sunday. The first two weeks of every
+                  quarter are open for everyone to try out the sport, but the
+                  following weeks are exclusive to paying members only. Sign ups
+                  for practice can be found on our Discord!
                 </div>
               }
             />
           </div>
 
-          <div className="flex w-full justify-center xl:w-1/3">
+          <div className="flex items-center justify-center sm:w-full md:w-2/3 xl:w-1/3">
             <InfoBox
               text={
-                <ul className="flex list-[square] flex-col text-center text-base marker:text-3xl marker:text-white xl:gap-8 xl:text-3xl">
+                <ul className="flex list-inside list-[square] flex-col text-base marker:text-4xl marker:text-white xl:gap-8 xl:pl-2 xl:text-3xl">
                   <li>Sunscreen</li>
                   <li>Water</li>
                   <li>Change of clothes</li>
@@ -54,9 +51,9 @@ const PracticeWrapper = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-30 xl:gap-30">
+      <div className="flex flex-col items-center">
         <PracticeShuttle />
-        <motion.div whileHover={{ scale: 1.05 }}>
+        <motion.div whileHover={{ scale: 1.05 }} className="pt-30 xl:pt-30">
           <Button className="bg-rsd-gold hover:bg-rsd-yellow font-rsd-alt rounded-full p-8 text-center text-3xl font-bold text-black xl:p-15 xl:text-5xl">
             <Link href="/">more events!</Link>
           </Button>
