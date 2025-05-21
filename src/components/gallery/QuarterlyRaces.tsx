@@ -27,7 +27,7 @@ const QuarterlyRaces = () => {
       <div className="absolute top-24 right-20 w-1/2">
         <GalleryCard photoName="Fall '24" link="" image={Paddle} />
       </div>
-      <div className="absolute top-115 left-20 w-1/2">
+      <div className="absolute top-112 left-20 w-1/2">
         <GalleryCard photoName="Winter '25" link="" image={Paddle} />
       </div>
       <div className="absolute top-200 right-20 w-1/2">
