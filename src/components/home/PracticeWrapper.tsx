@@ -24,7 +24,7 @@ const PracticeWrapper = () => {
           <div className="flex justify-center xl:w-3/4">
             <InfoBox
               text={
-                <div className="flex h-full items-center text-center text-base xl:text-4xl">
+                <div className="flex h-full items-center text-center">
                   RSD holds weekend practices at Mother's Beach in Long Beach
                   every Saturday and Sunday. The first two weeks of every
                   quarter are open for everyone to try out the sport, but the
@@ -38,7 +38,7 @@ const PracticeWrapper = () => {
           <div className="flex items-center justify-center sm:w-full md:w-2/3 xl:w-1/3">
             <InfoBox
               text={
-                <ul className="flex list-inside list-[square] flex-col text-base marker:text-4xl marker:text-white xl:gap-8 xl:pl-2 xl:text-3xl">
+                <ul className="flex list-inside list-[square] flex-col marker:text-4xl marker:text-white xl:gap-8 xl:pl-2">
                   <li>Sunscreen</li>
                   <li>Water</li>
                   <li>Change of clothes</li>
