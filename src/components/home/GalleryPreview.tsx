@@ -28,7 +28,7 @@ const GalleryPreview = () => {
   }, [api]);
 
   return (
-    <div className="relative flex-wrap">
+    <div className="relative mt-6 flex-wrap">
       <Carousel
         opts={{
           loop: true,

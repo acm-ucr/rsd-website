@@ -13,8 +13,7 @@ const Home = () => {
         />
       </div>
       <AwardsMapped />
-      <div></div>
-      <div className="flex pb-100">
+      <div className="flex pb-10">
         <PracticeWrapper />
       </div>
       <Header text="Gallery Preview" />
