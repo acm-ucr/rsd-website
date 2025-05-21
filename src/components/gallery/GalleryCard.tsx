@@ -10,7 +10,7 @@ interface GalleryInfo {
 
 const GalleryCard = ({ photoName, link, image }: GalleryInfo) => {
   return (
-    <div className="font-rsd-alt w-full items-center">
+    <div className="font-rsd-alt w-2/7 items-center">
       <Link href={link} target="_blank">
         <div className="flex w-full flex-col">
           <div className="relative h-65 rounded-t-2xl bg-gray-200">

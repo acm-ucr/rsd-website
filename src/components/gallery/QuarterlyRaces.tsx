@@ -24,14 +24,21 @@ const QuarterlyRaces = () => {
       />
 
       {/* Gallery Cards */}
+
       <div className="absolute top-24 right-20 w-1/2">
-        <GalleryCard photoName="Fall '24" link="" image={Paddle} />
+        <div className="w-650">
+          <GalleryCard photoName="Fall '24" link="" image={Paddle} />
+        </div>
       </div>
       <div className="absolute top-112 left-20 w-1/2">
-        <GalleryCard photoName="Winter '25" link="" image={Paddle} />
+        <div className="w-650">
+          <GalleryCard photoName="Winter '25" link="" image={Paddle} />
+        </div>
       </div>
       <div className="absolute top-200 right-20 w-1/2">
-        <GalleryCard photoName="Spring '25" link="" image={Paddle} />
+        <div className="w-650">
+          <GalleryCard photoName="Spring '25" link="" image={Paddle} />
+        </div>
       </div>
     </div>
   );
