@@ -1,11 +1,12 @@
 import GalleryCard from "@/components/gallery/GalleryCard";
 import Paddle from "@/public/doublePaddle.webp";
+import Logo from "@/public/RSDLogo.webp";
 import Dragon from "@/public/gallery/dragonBody.webp";
 import Image from "next/image";
 
 const QuarterlyRaces = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative flex w-full flex-col items-center">
       <div className="text-rsd-button-blue font-rsd-alt flex justify-center pb-10 text-5xl font-bold">
         Quarterly Races
       </div>
@@ -21,17 +22,15 @@ const QuarterlyRaces = () => {
         className="absolute -top-40 left-30 -z-10 w-145"
       />
 
-      <div className="relative z-10 flex justify-center">
-        <div className="grid grid-cols-1 gap-12 px-20 py-2">
-          <div className="w-955 px-151">
-            <GalleryCard photoName="Fall '24" link="" image={Paddle} />
-          </div>
-          <div className="w-650">
-            <GalleryCard photoName="Winter '25" link="" image={Paddle} />
-          </div>
-          <div className="w-955 px-151">
-            <GalleryCard photoName="Spring '25" link="" image={Paddle} />
-          </div>
+      <div className="z-10 grid w-3/4 grid-cols-3 grid-rows-3 gap-15 py-10">
+        <div className="col-span-2 col-start-2 row-start-1">
+          <GalleryCard photoName="Fall '24" link="" image={Logo} />
+        </div>
+        <div className="col-span-2 col-start-1 row-start-2">
+          <GalleryCard photoName="Winter '25" link="" image={Logo} />
+        </div>
+        <div className="col-span-2 col-start-2 row-start-3">
+          <GalleryCard photoName="Spring '25" link="" image={Logo} />
         </div>
       </div>
     </div>
