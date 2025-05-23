@@ -16,21 +16,21 @@ const Store = () => {
           <ProductCard productName="Shirt" productPrice="17.99$" />
           <ProductCard productName="Jacket" productPrice="29.99$" />
         </div>
-        <div className="relative flex w-screen items-center justify-center pt-7.5 pb-[22vh]">
+        <div className="relative m-10 flex w-screen items-center justify-center pt-7.5 pb-20 md:pb-30 lg:pb-[22vh]">
           <Image
             src={storeWave}
             alt="store wave background"
-            className="absolute bottom-4 left-0 -z-10 w-full object-cover"
+            className="absolute bottom-4 left-0 -z-10 hidden w-full object-cover lg:block"
           />
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute bottom-20 -left-25 -z-10 w-1/5"
+            className="absolute bottom-50 -left-45 -z-10 w-4/5 md:-left-80 md:w-3/4 lg:bottom-20 lg:-left-25 lg:w-1/5"
           />
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute -right-20 bottom-83 -z-10 w-1/6 scale-x-[-1]"
+            className="absolute -right-45 bottom-50 -z-10 w-4/5 scale-x-[-1] md:-right-80 md:w-3/4 lg:-right-20 lg:bottom-83 lg:w-1/6"
           />
           <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-15 text-center text-5xl font-bold text-white hover:bg-blue-900">
             <Link href="/">order form!</Link>
