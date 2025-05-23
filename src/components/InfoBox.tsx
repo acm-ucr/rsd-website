@@ -3,8 +3,8 @@ interface InfoBoxProps {
 }
 const InfoBox: React.FC<InfoBoxProps> = ({ text }) => {
   return (
-    <div className="my-8 w-full px-7 text-left md:w-2/3 xl:w-11/12 xl:px-0">
-      <div className="font-rsd-alt bg-rsd-dark-blue h-full rounded-4xl px-12 py-12 text-xl font-bold text-white md:px-20 md:py-20 md:text-2xl xl:text-3xl">
+    <div className="my-8 px-3 md:px-2 2xl:px-10 2xl:my-20 text-left xl:w-11/12">
+      <div className="font-rsd-alt bg-rsd-dark-blue h-full rounded-4xl p-10 text-xl font-bold text-white md:p-10 md:text-2xl lg:text-3xl 2xl:text-5xl">
         {text}
       </div>
     </div>

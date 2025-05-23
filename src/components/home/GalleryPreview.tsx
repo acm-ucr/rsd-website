@@ -67,7 +67,7 @@ const GalleryPreview = () => {
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`h-10 w-10 rounded-full lg:h-5 lg:w-5 ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
+            className={`h-10 w-10 rounded-full lg:h-5 lg:w-5 2xl:h-18 2xl:w-18 ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
             onClick={() => api?.scrollTo(index)}
           />
         ))}
