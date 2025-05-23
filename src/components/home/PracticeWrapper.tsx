@@ -14,18 +14,18 @@ const PracticeWrapper = () => {
       <div className="mb-4 flex justify-center">
         <Header text="Practice Info" />
       </div>
-      <div className="bg-rsd-title-blue xl:bg-transparent">
+      <div className="bg-rsd-title-blue mx-2 rounded-4xl xl:mx-0 xl:bg-transparent">
         <div className="relative w-full">
           <Image
             src={Wave}
             alt="Wave"
             className="absolute -z-10 hidden h-full w-full object-fill lg:h-fit xl:-top-[18vh] xl:flex 2xl:-top-[8vh]"
           />
-          <div className="flex flex-col flex-wrap px-8 md:flex-row md:flex-nowrap md:items-center xl:items-stretch xl:px-10 xl:py-10">
+          <div className="flex flex-col flex-wrap px-2 md:flex-row md:flex-nowrap md:items-center xl:items-stretch xl:px-10 xl:py-10">
             <div className="flex justify-center md:w-3/4">
               <InfoBox
                 text={
-                  <div className="flex h-full items-center text-center">
+                  <div className="flex items-center text-center">
                     RSD holds weekend practices at Mother's Beach in Long Beach
                     every Saturday and Sunday. The first two weeks of every
                     quarter are open for everyone to try out the sport, but the
@@ -39,7 +39,7 @@ const PracticeWrapper = () => {
             <div className="flex items-center justify-center md:w-1/3">
               <InfoBox
                 text={
-                  <ul className="flex list-outside list-[square] flex-col pl-8 marker:text-4xl marker:text-white md:pl-10 xl:gap-4">
+                  <ul className="marker-text-xl flex list-outside list-[square] flex-col pl-8 marker:text-white md:pl-10 md:marker:text-2xl lg:marker:text-3xl xl:gap-4 2xl:marker:text-5xl">
                     <li>Sunscreen</li>
                     <li>Water</li>
                     <li>Change of clothes</li>
