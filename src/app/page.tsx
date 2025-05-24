@@ -15,7 +15,7 @@ const Home = () => {
         />
       </div>
       <AwardsMapped /> */}
-      <div className="flex pb-10 2xl:pb-[25vh]">
+      <div className="flex pb-24 2xl:pb-[25vh]">
         <PracticeWrapper />
       </div>
       <Header text="Gallery Preview" />
