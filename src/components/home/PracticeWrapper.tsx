@@ -14,7 +14,7 @@ const PracticeWrapper = () => {
       <div className="mb-4 flex justify-center">
         <Header text="Practice Info" />
       </div>
-      <div className="bg-rsd-title-blue mx-2 rounded-4xl xl:mx-0 xl:bg-transparent">
+      <div className="bg-rsd-title-blue w-full rounded-4xl xl:bg-transparent">
         <div className="relative w-full">
           <Image
             src={Wave}
