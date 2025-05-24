@@ -10,11 +10,11 @@ import { motion } from "motion/react";
 
 const PracticeWrapper = () => {
   return (
-    <div className="flex flex-col">
+    <div className="relative">
       <div className="mb-4 flex justify-center">
         <Header text="Practice Info" />
       </div>
-      <div className="bg-rsd-title-blue w-full rounded-4xl xl:bg-transparent">
+      <div className="bg-rsd-title-blue w-screen rounded-4xl xl:bg-transparent">
         <div className="relative w-full">
           <Image
             src={Wave}
