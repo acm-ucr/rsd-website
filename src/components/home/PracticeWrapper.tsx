@@ -39,7 +39,7 @@ const PracticeWrapper = () => {
             <div className="flex items-center justify-center md:w-1/3">
               <InfoBox
                 text={
-                  <ul className="marker-text-xl flex list-outside list-[square] flex-col pl-8 marker:text-white md:pl-10 md:marker:text-2xl lg:marker:text-3xl xl:gap-4 2xl:marker:text-5xl">
+                  <ul className="marker-text-xl flex list-outside list-[square] flex-col pl-2 marker:text-white md:pl-10 md:marker:text-2xl lg:marker:text-3xl xl:gap-2 2xl:marker:text-4xl">
                     <li>Sunscreen</li>
                     <li>Water</li>
                     <li>Change of clothes</li>
@@ -54,8 +54,8 @@ const PracticeWrapper = () => {
 
         <div className="flex flex-col items-center">
           <PracticeShuttle />
-          <motion.div whileHover={{ scale: 1.05 }} className="p-10 2xl:pt-40">
-            <Button className="bg-rsd-gold hover:bg-rsd-yellow font-rsd-alt rounded-full p-8 text-center text-3xl font-bold text-black xl:p-16 xl:text-5xl 2xl:p-32 2xl:text-7xl">
+          <motion.div whileHover={{ scale: 1.05 }} className="p-6 2xl:p-20">
+            <Button className="bg-rsd-gold hover:bg-rsd-yellow font-rsd-alt rounded-full p-8 text-center text-2xl font-bold text-black md:text-3xl xl:p-10 2xl:p-24 2xl:text-5xl">
               <Link href="/">more events!</Link>
             </Button>
           </motion.div>

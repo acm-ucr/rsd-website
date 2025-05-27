@@ -44,7 +44,7 @@ const Navbar = () => {
 
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative flex flex-col items-center justify-center px-4 duration-1 hover:scale-110 md:hidden"
+        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center px-4 duration-1 hover:scale-110 md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
