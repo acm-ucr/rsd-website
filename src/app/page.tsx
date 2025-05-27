@@ -7,7 +7,7 @@ import Landing from "@/components/home/Landing";
 const Home = () => {
   return (
     <div className="flex h-1/2 w-screen flex-col items-center justify-center">
-      <Landing/>
+      <Landing />
       <div className="mt-10 mb-10 flex w-3/5 items-center justify-center">
         <iframe
           src="https://www.youtube.com/embed/Xs0hR3QIQNE?si=qkDfhaD82i5ogqoe"
