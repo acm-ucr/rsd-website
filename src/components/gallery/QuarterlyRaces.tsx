@@ -7,7 +7,7 @@ import Image from "next/image";
 const QuarterlyRaces = () => {
   return (
     <div className="relative flex w-full flex-col items-center">
-      <div className="text-rsd-button-blue font-rsd-alt flex py-10 text-center text-5xl font-bold">
+      <div className="text-rsd-button-blue font-rsd-alt flex pt-4 pb-10 text-center text-3xl font-bold md:text-5xl">
         Quarterly Races
       </div>
 
