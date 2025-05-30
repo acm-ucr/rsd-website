@@ -12,27 +12,27 @@ const Store = () => {
     <div>
       <div className="relative flex w-screen flex-col items-center justify-center">
         <Header text="Featured Products" />
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0">
           <ProductCard productName="Shirt" productPrice="17.99$" />
           <ProductCard productName="Jacket" productPrice="29.99$" />
         </div>
-        <div className="relative m-10 flex w-screen items-center justify-center pt-7.5 pb-20 md:pb-30 lg:pb-[22vh]">
+        <div className="relative flex w-screen items-center justify-center pt-7.5 pb-25 md:pb-[22vh]">
           <Image
             src={storeWave}
             alt="store wave background"
-            className="absolute bottom-4 left-0 -z-10 hidden w-full object-cover lg:block"
+            className="absolute bottom-4 left-0 -z-10 hidden w-full object-cover md:block"
           />
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute bottom-50 -left-45 -z-10 w-4/5 md:-left-80 md:w-3/4 lg:bottom-20 lg:-left-25 lg:w-1/5"
+            className="absolute bottom-0 -left-32 -z-10 w-7/10 sm:w-1/2 md:bottom-20 md:-left-25 md:w-1/4 lg:w-1/5"
           />
           <Image
             src={Cloud}
             alt="store wave background"
-            className="absolute -right-45 bottom-50 -z-10 w-4/5 scale-x-[-1] md:-right-80 md:w-3/4 lg:-right-20 lg:bottom-83 lg:w-1/6"
+            className="absolute -right-32 bottom-0 -z-10 w-7/10 scale-x-[-1] sm:w-1/2 md:-right-20 md:bottom-60 md:w-1/4 lg:bottom-83 lg:w-1/6"
           />
-          <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-15 text-center text-5xl font-bold text-white hover:bg-blue-900">
+          <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-10 text-center text-xl font-bold text-white hover:bg-blue-900 md:p-12 md:text-3xl lg:p-15 lg:text-5xl">
             <Link href="/">order form!</Link>
             {/* Could not find a current link to merch, only old link */}
           </Button>
