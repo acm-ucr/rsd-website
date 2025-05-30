@@ -6,7 +6,7 @@ import Star4Point from "@/public/4pointStar.webp";
 
 const AboutUs = () => {
   return (
-    <div className="overflow-hidden z-10 flex w-full flex-col items-center px-6 py-14 text-center">
+    <div className="z-10 flex w-full flex-col items-center overflow-hidden px-6 py-14 text-center">
       <Header text="About Us" />
       <InfoBox
         text="Dragon Boat is a team sport with 18-20 paddlers, a drummer, and a steer. The drummer sits at the front, drumming to set the pace and make calls when necessary. The steer stands at the back of the boat (the stern) and guides the boat through the water, keeping it on course. 
@@ -25,7 +25,7 @@ const AboutUs = () => {
       <Image
         src={Paddles}
         alt="Paddles"
-        className="hidden absolute top-30 -right-40 scale-50 scale-x-[-1]-rotate-35 md:flex lg:scale-100  "
+        className="scale-x-[-1]-rotate-35 absolute top-30 -right-40 hidden scale-50 md:flex lg:scale-100"
       />
     </div>
   );
