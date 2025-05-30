@@ -8,10 +8,10 @@ const OtherEvents = () => {
     <div className="relative flex flex-col items-center pb-10">
       <Image src={wave} alt="wave" className="absolute bottom-0 w-screen" />
       <div className="relative z-10 w-3/4">
-        <div className="text-rsd-button-blue font-rsd-alt flex justify-center pb-10 text-5xl font-bold">
+        <div className="text-rsd-button-blue font-rsd-alt flex text-center justify-center pb-10 text-5xl font-bold">
           Other Events
         </div>
-        <div className="flex items-center justify-center gap-15 pb-10">
+        <div className="md:flex items-center justify-center gap-15 pb-10 space-y-10 md:space-y-0">
           <GalleryCard photoName="Practices ‘24-’25" link="/" image={logo} />
           <GalleryCard photoName="Socials ‘24-’25" link="/" image={logo} />
         </div>
