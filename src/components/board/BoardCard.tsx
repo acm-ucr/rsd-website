@@ -23,15 +23,17 @@ const BoardCard = ({
   instagram,
 }: BoardCardProps) => {
   return (
-    <div className="to-rsd-dark-blue from-rsd-title-blue flex flex-col items-center rounded-3xl bg-radial p-15 md:w-[30vw]">
+    <div className="to-rsd-dark-blue from-rsd-title-blue flex flex-col items-center rounded-3xl bg-radial p-10 md:w-[30vw] lg:p-15">
       <Image
         src={image || RSDLogo}
         alt={name}
-        className="flex aspect-square h-3/4 w-full flex-shrink-0 justify-center rounded-2xl object-cover"
+        className="flex aspect-square h-3/4 w-full justify-center rounded-2xl object-cover"
       />
       <div className="font-rsd-alt flex flex-col items-center p-5 text-center font-bold">
-        <div className="text-rsd-yellow flex text-4xl">{name}</div>
-        <div className="flex text-center text-3xl text-white">{role}</div>
+        <div className="text-rsd-yellow flex text-3xl lg:text-4xl">{name}</div>
+        <div className="flex text-center text-xl text-white lg:text-3xl">
+          {role}
+        </div>
       </div>
       <div className="flex w-full flex-row place-items-end justify-end">
         <Link href={email}>
