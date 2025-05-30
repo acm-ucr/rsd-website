@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Award from "@/public/doublePaddle.webp";
+import Award from "@/public/doublePaddle.png";
 interface AwardCardProps {
   AwardName: string;
 }
