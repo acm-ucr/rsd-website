@@ -25,7 +25,7 @@ const AboutUs = () => {
       <Image
         src={Paddles}
         alt="Paddles"
-        className="invisible absolute top-8 -right-40 scale-110 scale-x-[-1] -rotate-35 md:visible"
+        className="hidden absolute top-8 -right-40 scale-50  scale-x-[-1] -rotate-35 md:flex lg:scale-110 "
       />
     </div>
   );
