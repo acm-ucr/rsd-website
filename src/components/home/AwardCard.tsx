@@ -5,7 +5,7 @@ interface AwardCardProps {
 }
 const AwardCard = ({ AwardName }: AwardCardProps) => {
   return (
-    <div className="font-rsd-main flex h-55 w-64 flex-col items-center gap-10 p-7 sm:p-8 sm:h-65 md:p-9 md:h-80 lg:p-10 lg:h-80">
+    <div className="font-rsd-main flex h-55 w-64 flex-col items-center gap-10 p-7 sm:h-65 sm:p-8 md:h-80 md:p-9 lg:h-80 lg:p-10">
       <Image
         src={Award}
         alt="Award"
