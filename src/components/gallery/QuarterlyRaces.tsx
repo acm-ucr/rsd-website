@@ -1,5 +1,5 @@
 import GalleryCard from "@/components/gallery/GalleryCard";
-import Paddle from "@/public/doublePaddle.png";
+import Paddle from "@/public/doublePaddle.webp";
 import Logo from "@/public/RSDLogo.webp";
 import Dragon from "@/public/gallery/dragonBody.webp";
 import Image from "next/image";
