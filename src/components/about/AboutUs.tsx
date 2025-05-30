@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import InfoBox from "@/components/InfoBox";
 import Image from "next/image";
-import Paddles from "@/public/doublePaddle.png";
+import Paddles from "@/public/doublePaddle.webp";
 import Star4Point from "@/public/4pointStar.webp";
 
 const AboutUs = () => {
