@@ -7,22 +7,22 @@ import Image from "next/image";
 const QuarterlyRaces = () => {
   return (
     <div className="relative flex w-full flex-col items-center">
-      <div className="text-rsd-button-blue font-rsd-alt flex text-center py-10 text-5xl font-bold">
+      <div className="text-rsd-button-blue font-rsd-alt flex py-10 text-center text-5xl font-bold">
         Quarterly Races
       </div>
 
       <Image
         src={Dragon}
         alt="dragon"
-        className="md:flex hidden absolute top-80 left-0 -z-10 w-full"
+        className="absolute top-80 left-0 -z-10 hidden w-full md:flex"
       />
       <Image
         src={Paddle}
         alt="double paddle"
-        className="xl:flex hidden absolute -top-40 left-30 -z-10 w-145"
+        className="absolute -top-40 left-30 -z-10 hidden w-145 xl:flex"
       />
 
-      <div className="z-10 md:grid w-3/4 grid-cols-3 grid-rows-3 gap-15 py-10  space-y-10 md:space-y-0">
+      <div className="z-10 w-3/4 grid-cols-3 grid-rows-3 gap-15 space-y-10 py-10 md:grid md:space-y-0">
         <div className="col-span-2 col-start-2 row-start-1">
           <GalleryCard photoName="Fall '24" link="" image={Logo} />
         </div>
