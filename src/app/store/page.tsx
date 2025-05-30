@@ -38,7 +38,7 @@ const Store = () => {
           </Button>
         </div>
       </div>
-      <div className="relative m-25">
+      <div className="relative m-10 md:m-25">
         <Header text="Stickers?" />
         <StickersBox />
       </div>
