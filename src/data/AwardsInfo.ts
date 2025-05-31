@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import CollegeCupLogo from "@/public/home/collegecuplogo.jpg";
-import TempeLogo from "@/public/home/tempelogo.png";
+import CollegeCupLogo from "@/public/home/collegecuplogo.webp";
+import TempeLogo from "@/public/home/tempelogo.webp";
 
 export interface Award {
   name: string;
