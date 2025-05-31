@@ -6,7 +6,7 @@ import Star4Point from "@/public/4pointStar.webp";
 
 const AboutUs = () => {
   return (
-    <div className="z-10 flex w-full flex-col items-center overflow-hidden px-6 py-14 text-center">
+    <div className="z-10 flex w-full flex-col items-center overflow-hidden px-6 text-center">
       <Header text="About Us" />
       <div className="relative flex w-full flex-col items-center">
         <InfoBox

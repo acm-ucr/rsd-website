@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-rsd-mid-blue flex w-full flex-row flex-wrap items-center justify-between px-5 py-4">
+    <div className="bg-rsd-mid-blue sticky top-0 z-100 flex w-full flex-row flex-wrap items-center justify-between px-5 py-4">
       <motion.div whileHover={{ scale: 1.2 }}>
         <Link href="/" onClick={closeMenu}>
           <Image src={logo} alt="RSD Logo" className="w-[20vw] md:w-[6vw]" />

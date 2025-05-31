@@ -3,7 +3,7 @@ import InfoBox from "@/components/InfoBox";
 
 const ImportantEvents = () => {
   return (
-    <div className="flex h-full w-screen flex-col items-center">
+    <div className="flex h-full w-screen flex-col items-center px-6">
       <Header text="Important Events" />
       <div className="flex w-5/6 justify-center">
         <InfoBox
