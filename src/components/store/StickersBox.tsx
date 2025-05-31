@@ -9,7 +9,7 @@ const StickersBox = () => {
       <div className="relative flex w-fit items-center justify-center">
         <Image src={DragonFrame} alt="Outer Dragon Frame" />
         <div className="bg-rsd-mid-blue absolute mx-3 flex h-3/4 w-fit items-center rounded-3xl bg-radial from-white px-0 md:mx-24 md:px-32 lg:px-64">
-          <p className="font-rsd-main z-20 text-center text-sm font-bold md:text-xl lg:text-4xl">
+          <p className="font-rsd-main z-20 px-2 text-center text-sm font-bold md:text-xl lg:text-4xl">
             Come visit us at tabling for stickers!
           </p>
           <Image

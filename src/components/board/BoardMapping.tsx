@@ -14,7 +14,6 @@ const BoardMapping = () => {
             role={member.title}
             image={member.image}
             email={member.email}
-            discord={member.discord}
             instagram={member.instagram}
           />
         ))}

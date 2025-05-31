@@ -8,34 +8,40 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { slides, slide } from "@/data/ResultsInfo";
+import Header from "@/components/Header";
 
 const RaceResults = () => {
   return (
-    <div className="bg-rsd-dark-blue flex flex-col items-center rounded-4xl px-5 py-15">
-      <Carousel
-        opts={{
-          loop: false,
-        }}
-        className="w-[60vw]"
-      >
-        <CarouselContent>
-          {slides.map((slide: slide) => (
-            <CarouselItem key={slide.id} className="md:basis-1/3">
-              <Card className="bg-rsd-dark-blue border-none shadow-none">
-                <CardContent className="font-rsd-alt flex aspect-square flex-col items-center justify-center font-bold">
-                  <span className="text-rsd-yellow text-3xl">{slide.year}</span>
-                  <span className="text-lg text-white">{slide.title}</span>
-                  <span className="text-rsd-light-blue text-xs">
-                    {slide.subtitle}
-                  </span>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent" />
-        <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent" />
-      </Carousel>
+    <div className="flex w-full flex-col items-center justify-center">
+      <Header text="List of Race Results" />
+      <div className="bg-rsd-dark-blue mb-10 flex w-[60vw] flex-col items-center rounded-4xl px-5 py-15">
+        <Carousel
+          opts={{
+            loop: false,
+          }}
+          className="w-[60vw]"
+        >
+          <CarouselContent>
+            {slides.map((slide: slide) => (
+              <CarouselItem key={slide.id} className="md:basis-1/3">
+                <Card className="bg-rsd-dark-blue border-none shadow-none">
+                  <CardContent className="font-rsd-alt flex aspect-square flex-col items-center justify-center font-bold">
+                    <span className="text-rsd-yellow text-3xl">
+                      {slide.year}
+                    </span>
+                    <span className="text-lg text-white">{slide.title}</span>
+                    <span className="text-rsd-light-blue text-xs">
+                      {slide.subtitle}
+                    </span>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent" />
+          <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent" />
+        </Carousel>
+      </div>
     </div>
   );
 };

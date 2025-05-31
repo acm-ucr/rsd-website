@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +10,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { slides, slide } from "@/data/GalleryImages";
+import Image from "next/image";
 
 const GalleryPreview = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -28,19 +29,19 @@ const GalleryPreview = () => {
   }, [api]);
 
   return (
-    <div className="relative mt-6 flex flex-wrap justify-center md:pr-4 lg:pr-0">
+    <div className="relative mt-6 flex w-full flex-wrap items-center justify-center">
       <Carousel
         opts={{
           loop: true,
         }}
         setApi={setApi}
-        className="left-4 flex w-[90vw] lg:left-0"
+        className="flex w-[90vw]"
       >
         <CarouselContent className="relative w-[95vw]">
           {slides.map((slide: slide, index: number) => (
             <CarouselItem
-              key={slide.id}
-              className={`lg:basis-1/3 ${
+              key={index}
+              className={`basis-full lg:basis-1/3 ${
                 current === (index - 1 + totalSlides) % totalSlides ||
                 current === (index + 1) % totalSlides ||
                 current === index
@@ -49,25 +50,27 @@ const GalleryPreview = () => {
               } `}
             >
               <Card
-                className={`bg-rsd-yellow w-11/12 ${current === index ? "scale-[100%]" : "scale-[75%]"}`}
+                className={`w-11/12 ${current === index ? "scale-[100%]" : "scale-[75%]"}`}
               >
-                <CardContent className="flex aspect-square items-center justify-center text-6xl">
-                  {slide.id}
-                </CardContent>
+                <Image
+                  src={slide.image}
+                  alt="gallery preview"
+                  className="h-full rounded-lg object-cover"
+                />
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="hidden lg:flex">
+        <div className="hidden md:block">
           <CarouselPrevious />
           <CarouselNext />
         </div>
       </Carousel>
-      <div className="flex justify-center space-x-4 py-4">
+      <div className="flex justify-center py-4">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`h-8 w-8 rounded-full 2xl:h-12 2xl:w-12 ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
+            className={`mx-1 h-8 w-8 rounded-full 2xl:h-12 2xl:w-12 ${current === index ? "bg-rsd-dark-blue" : "bg-rsd-mid-blue"}`}
             onClick={() => api?.scrollTo(index)}
           />
         ))}

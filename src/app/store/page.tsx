@@ -34,11 +34,10 @@ const Store = () => {
           />
           <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-10 text-center text-xl font-bold text-white hover:bg-blue-900 md:p-12 md:text-3xl lg:p-15 lg:text-5xl">
             <Link href="/">order form!</Link>
-            {/* Could not find a current link to merch, only old link */}
           </Button>
         </div>
       </div>
-      <div className="relative m-10 md:m-25">
+      <div className="relative m-10 flex flex-col items-center md:m-25">
         <Header text="Stickers?" />
         <StickersBox />
       </div>

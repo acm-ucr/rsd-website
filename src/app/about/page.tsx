@@ -5,7 +5,7 @@ import ImportantEvents from "@/components/about/ImportantEvents";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <AboutUs />
       <ImportantEvents />
       <History />
