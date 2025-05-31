@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import RSDLogo from "@/public/RSDLogo.webp";
 import { Mail } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
 
