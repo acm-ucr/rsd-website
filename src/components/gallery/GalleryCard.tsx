@@ -13,7 +13,7 @@ const GalleryCard = ({ photoName, link, image }: GalleryInfo) => {
     <Link
       href={link}
       target="_blank"
-      className="font-rsd-alt flex w-full flex-col"
+      className="font-rsd-alt flex w-full flex-col drop-shadow-lg"
     >
       <div className="relative h-80 rounded-t-2xl bg-gray-200">
         <Image className="object-cover" src={image} alt="product" fill />

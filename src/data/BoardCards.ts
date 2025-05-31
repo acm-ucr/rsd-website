@@ -1,14 +1,15 @@
-import RSDLogo from "@/public/RSDLogo.webp";
-import MemberIMG1 from "@/public/board/ArielLee.webp";
-import MemberIMG2 from "@/public/board/CandiceHsieh.webp";
-import MemberIMG3 from "@/public/board/EmilyHuang.webp";
-import MemberIMG4 from "@/public/board/EthanHo.webp";
-import MemberIMG5 from "@/public/board/JocelynLee.webp";
-import MemberIMG6 from "@/public/board/JustinChao.webp";
-import MemberIMG7 from "@/public/board/LaurenChou.webp";
-import MemberIMG8 from "@/public/board/NathanTan.webp";
-import MemberIMG9 from "@/public/board/PatrickGao.webp";
-import MemberIMG10 from "@/public/board/QuentinPhillips.webp";
+import ArielLee from "@/public/board/ArielLee.webp";
+import CandiceHsieh from "@/public/board/CandiceHsieh.webp";
+import EmilyHuang from "@/public/board/EmilyHuang.webp";
+import EthanHo from "@/public/board/EthanHo.webp";
+import JocelynLee from "@/public/board/JocelynLee.webp";
+import JustinChao from "@/public/board/JustinChao.webp";
+import LaurenChou from "@/public/board/LaurenChou.webp";
+import NathanTan from "@/public/board/NathanTan.webp";
+import PatrickGao from "@/public/board/PatrickGao.webp";
+import QuentinPhillips from "@/public/board/QuentinPhillips.webp";
+import AnishkaDhruv from "@/public/board/AnishkaDhruv.jpg";
+import JustinShiu from "@/public/board/JustinShiu.png";
 import { StaticImageData } from "next/image";
 
 export interface BoardMember {
@@ -16,7 +17,6 @@ export interface BoardMember {
   title: string;
   image: StaticImageData;
   email: string;
-  discord: string;
   instagram: string;
 }
 
@@ -24,105 +24,85 @@ const boardMembers: BoardMember[] = [
   {
     name: "Ethan Ho",
     title: "CAPTAIN",
-    image: MemberIMG4,
+    image: EthanHo,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Justin Chao",
     title: "TEAM MANAGER",
-    image: MemberIMG6,
+    image: JustinChao,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Ariel Lee",
     title: "TEAM MANAGER",
-    image: MemberIMG1,
+    image: ArielLee,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Candice Hsieh",
     title: "TREASURER",
-    image: MemberIMG2,
+    image: CandiceHsieh,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Patrick Gao",
     title: "OUTREACH/FUNDRAISING",
-    image: MemberIMG9,
+    image: PatrickGao,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Nathan Tan",
     title: "SOCIAL CHAIR",
-    image: MemberIMG8,
+    image: NathanTan,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Emily Huang",
     title: "PR CHAIR",
-    image: MemberIMG3,
+    image: EmilyHuang,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Lauren Chou",
     title: "PR CHAIR",
-    image: MemberIMG7,
+    image: LaurenChou,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Anishka Durvasula",
     title: "PR CHAIR",
-    image: RSDLogo,
+    image: AnishkaDhruv,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Jocelyn Lee",
     title: "WATER COACH",
-    image: MemberIMG5,
+    image: JocelynLee,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Justin Shiu",
     title: "WATER COACH",
-    image: RSDLogo,
+    image: JustinShiu,
     email: "/",
-    discord: "/",
     instagram: "/",
   },
   {
     name: "Quentin Phillips",
     title: "LAND COACH",
-    image: MemberIMG10,
+    image: QuentinPhillips,
     email: "/",
-    discord: "/",
-    instagram: "/",
-  },
-  {
-    name: "Angelica Lee",
-    title: "LAND COACH",
-    image: RSDLogo,
-    email: "/",
-    discord: "/",
     instagram: "/",
   },
 ];

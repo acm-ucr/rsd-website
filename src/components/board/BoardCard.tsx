@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import RSDLogo from "@/public/RSDLogo.webp";
 import { Mail } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
 
@@ -10,18 +9,10 @@ interface BoardCardProps {
   role: string;
   image: StaticImageData;
   email: string;
-  discord: string;
   instagram: string;
 }
 
-const BoardCard = ({
-  name,
-  role,
-  image,
-  email,
-  discord,
-  instagram,
-}: BoardCardProps) => {
+const BoardCard = ({ name, role, image, email, instagram }: BoardCardProps) => {
   return (
     <div className="to-rsd-dark-blue from-rsd-title-blue flex flex-col items-center rounded-3xl bg-radial p-10 md:w-[30vw] lg:p-15">
       <Image
@@ -41,9 +32,6 @@ const BoardCard = ({
         </Link>
         <Link href={instagram}>
           <AiFillInstagram className="flex text-5xl text-white" />
-        </Link>
-        <Link href={discord}>
-          <FaDiscord className="flex text-5xl text-white" />
         </Link>
       </div>
     </div>
