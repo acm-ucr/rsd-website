@@ -8,8 +8,8 @@ import LaurenChou from "@/public/board/LaurenChou.webp";
 import NathanTan from "@/public/board/NathanTan.webp";
 import PatrickGao from "@/public/board/PatrickGao.webp";
 import QuentinPhillips from "@/public/board/QuentinPhillips.webp";
-import AnishkaDhruv from "@/public/board/AnishkaDhruv.jpg";
-import JustinShiu from "@/public/board/JustinShiu.png";
+import AnishkaDhruv from "@/public/board/AnishkaDhruv.webp";
+import JustinShiu from "@/public/board/JustinShiu.webp";
 import { StaticImageData } from "next/image";
 
 export interface BoardMember {
