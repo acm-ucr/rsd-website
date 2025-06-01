@@ -13,8 +13,8 @@ const Store = () => {
       <div className="relative flex w-screen flex-col items-center justify-center overflow-hidden">
         <Header text="Featured Products" />
         <div className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0">
-          <ProductCard productName="Shirt" productPrice="17.99$" />
-          <ProductCard productName="Jacket" productPrice="29.99$" />
+          <ProductCard productName="Shirt" productPrice="$17.99" />
+          <ProductCard productName="Jacket" productPrice="$29.99" />
         </div>
         <div className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]">
           <Image
