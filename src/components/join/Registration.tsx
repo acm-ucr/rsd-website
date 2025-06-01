@@ -7,10 +7,18 @@ import Header from "@/components/Header";
 const Registration = () => {
   return (
     <div className="flex flex-col items-center overflow-hidden">
-      <Header text="Fee Information"/>
+      <Header text="Fee Information" />
       <div className="relative flex justify-center">
-          <Image src={Star4Point} alt="Four Point Star" className="absolute"  />
-          <Image src={Star4Point} alt="Four Point Star" className="absolute" />
+        <Image
+          src={Star4Point}
+          alt="Four Point Star"
+          className="absolute top-[15%] left-[3%] size-10 md:size-20"
+        />
+        <Image
+          src={Star4Point}
+          alt="Four Point Star"
+          className="absolute right-[4%] bottom-[10%] size-10 md:size-20"
+        />
         <InfoBox
           text={
             <ul className="marker:text-rsd-gold list-outside list-disc">
