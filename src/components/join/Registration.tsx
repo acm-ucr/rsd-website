@@ -2,20 +2,23 @@ import InfoBox from "../InfoBox";
 import Image from "next/image";
 import Star4Point from "@/public/4pointStar.webp";
 import { items } from "@/data/FeeLabels";
+import Header from "@/components/Header";
 
 const Registration = () => {
   return (
-    <div className="flex flex-col">
-      <div className="text-rsd-title-blue text-center text-5xl sm:text-6xl xl:text-7xl">
-        Fee Information
-      </div>
+    <div className="flex flex-col items-center overflow-hidden">
+      <Header text="Fee Information" />
       <div className="relative flex justify-center">
-        <div className="absolute -top-5 -left-5 sm:left-2 md:left-3 lg:left-6 xl:left-9 2xl:left-11.5">
-          <Image src={Star4Point} alt="Four Point Star" width={130} />
-        </div>
-        <div className="absolute right-[0.1vw] bottom-11 sm:right-2 md:right-3.5 lg:right-6 xl:right-9 2xl:right-11.5">
-          <Image src={Star4Point} alt="Four Point Star" className="w-3/4" />
-        </div>
+        <Image
+          src={Star4Point}
+          alt="Four Point Star"
+          className="absolute top-[15%] left-[3%] size-10 md:size-20"
+        />
+        <Image
+          src={Star4Point}
+          alt="Four Point Star"
+          className="absolute right-[4%] bottom-[10%] size-10 md:size-20"
+        />
         <InfoBox
           text={
             <ul className="marker:text-rsd-gold list-outside list-disc">
