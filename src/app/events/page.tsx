@@ -7,25 +7,24 @@ import Cloud from "@/public/cloud.webp";
 import logo from "@/public/RSDLogo.webp";
 
 const UpcomingEventsInfo = [
-  //Temporary Array of data, just for visualization
   {
-    Month: "Month",
-    Date: "Day",
-    Name: "Name",
-    Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Month: "January",
+    Date: "05",
+    Name: "Cool Event",
+    Desc: "awesome event so cool and awesome",
   },
   {
-    Month: "Month",
-    Date: "Day",
-    Name: "Name",
-    Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Month: "October",
+    Date: "11",
+    Name: "Swag Event",
+    Desc: "practice at the beach or whatever wow so swag",
   },
 ];
 
 const Events = () => {
   return (
-    <div>
-      <div className="relative">
+    <div className="flex w-full max-w-screen flex-col items-center overflow-hidden">
+      <div className="relative flex w-full flex-col items-center">
         <Header text="Upcoming Events" />
         <div className="mb-16 flex flex-wrap justify-center gap-y-8">
           {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
@@ -41,15 +40,13 @@ const Events = () => {
         <Image
           src={EventsWave}
           alt="Waves with Oars"
-          className="absolute -bottom-40 w-screen object-fill"
+          className="absolute bottom-0 hidden w-screen object-fill md:-bottom-[13%] md:block"
         />
       </div>
 
-      <div className="relative flex flex-col pb-20">
-        <div className="mt-20">
-          <Header text="Past Events" />
-        </div>
-        <div className="flex justify-center gap-10 [&>*:nth-child(even)]:mt-40">
+      <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-40">
+        <Header text="Past Events" />\
+        <div className="flex w-10/12 flex-col justify-center gap-10 md:w-11/12 md:flex-row md:[&>*:nth-child(even)]:mt-40">
           <PastCard eventName="eventName" image={logo} />
           <PastCard eventName="eventName" image={logo} />
           <PastCard eventName="eventName" image={logo} />
@@ -57,12 +54,12 @@ const Events = () => {
         <Image
           src={Cloud}
           alt="cloud"
-          className="absolute bottom-0 -left-30 w-1/4"
+          className="absolute bottom-0 -left-[7%] hidden w-1/4 md:block"
         />
         <Image
           src={Cloud}
           alt="cloud"
-          className="absolute -right-30 bottom-0 w-1/4"
+          className="absolute -right-[7%] bottom-0 hidden w-1/4 md:block"
         />
       </div>
     </div>

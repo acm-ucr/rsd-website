@@ -6,7 +6,7 @@ const BoardMapping = () => {
   return (
     <div className="flex flex-col items-center justify-center p-10">
       <Header text="Meet the Board!" />
-      <div className="mt-10 grid grid-cols-2 gap-x-40 gap-y-20 md:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-x-40 gap-y-20 md:grid-cols-2">
         {boardMembers.map((member, index) => (
           <BoardCard
             key={index}
@@ -14,7 +14,6 @@ const BoardMapping = () => {
             role={member.title}
             image={member.image}
             email={member.email}
-            discord={member.discord}
             instagram={member.instagram}
           />
         ))}
