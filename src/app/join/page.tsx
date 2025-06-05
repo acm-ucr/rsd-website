@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import JoinDragon from "@/public/join/joinDragon.webp";
 import Cloud from "@/public/cloud.webp";
@@ -6,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Registration from "@/components/join/Registration";
 import Header from "@/components/Header";
+import { motion } from "motion/react";
 
 const Join = () => {
   return (
@@ -24,9 +26,11 @@ const Join = () => {
               Join RSD as we take on the waves! Membership fees are $60 per
               quarter and a discounted $150 for a yearly membership. Join our
               discord for more information about how to register for membership!
-              <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-5 rounded-4xl p-7 text-lg sm:text-xl xl:p-8 xl:text-3xl">
-                <Link href="/">Join Our Discord!</Link>
-              </Button>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-5 rounded-4xl p-7 text-lg sm:text-xl xl:p-8 xl:text-3xl">
+                  <Link href="/">Join Our Discord!</Link>
+                </Button>
+              </motion.div>
             </div>
           }
         />
