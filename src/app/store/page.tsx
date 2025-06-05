@@ -15,8 +15,11 @@ const Store = () => {
       <div className="relative flex w-screen flex-col items-center justify-center overflow-hidden">
         <Header text="Featured Products" />
         <motion.div
-          transition={{ duration: 0.5 }}
-          initial={{ opacity: 0.3, y: 10 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.4,
+          }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0"
@@ -25,8 +28,11 @@ const Store = () => {
           <ProductCard productName="Jacket" productPrice="$29.99" />
         </motion.div>
         <motion.div
-          transition={{ duration: 0.5 }}
-          initial={{ opacity: 0.3, y: 10 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.4,
+          }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]"
@@ -54,8 +60,11 @@ const Store = () => {
       <div className="relative m-10 flex flex-col items-center md:m-25">
         <Header text="Stickers?" />
         <motion.div
-          transition={{ duration: 0.5 }}
-          initial={{ opacity: 0.3, y: 10 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.4,
+          }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
