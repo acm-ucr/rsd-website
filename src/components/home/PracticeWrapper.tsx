@@ -14,9 +14,18 @@ const PracticeWrapper = () => {
       <div className="flex justify-center">
         <Header text="Practice Info" />
       </div>
-      <Image src={Wave} alt="wave" className="-mb-1 w-full" />
+      <motion.div
+        animate={{ y: [0, 30, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      >
+        <Image src={Wave} alt="wave" className="-mb-1 w-full" />
+      </motion.div>
       <div className="bg-rsd-wave-blue w-screen">
-        <div className="relative flex w-full flex-col md:flex-row">
+        <motion.div
+          animate={{ y: [0, -10, 0, 10, 0] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="relative flex w-full flex-col md:flex-row"
+        >
           <div className="flex justify-center md:w-3/4">
             <InfoBox
               text={
@@ -44,8 +53,8 @@ const PracticeWrapper = () => {
               }
             />
           </div>
-        </div>
-        <div className="flex flex-col items-center">
+        </motion.div>
+        <div className="flex flex-col items-center pb-10">
           <PracticeShuttle />
           <motion.div whileHover={{ scale: 1.05 }} className="p-6">
             <Button className="bg-rsd-gold hover:bg-rsd-yellow font-rsd-alt rounded-full p-10 text-center text-2xl font-bold text-black md:text-3xl">
@@ -54,7 +63,12 @@ const PracticeWrapper = () => {
           </motion.div>
         </div>
       </div>
-      <Image src={Wave} alt="wave" className="-mt-1 w-full scale-y-[-1]" />
+      <motion.div
+        animate={{ y: [0, -30, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      >
+        <Image src={Wave} alt="wave" className="-mt-1 w-full scale-y-[-1]" />
+      </motion.div>
     </div>
   );
 };
