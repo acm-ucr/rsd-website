@@ -24,13 +24,13 @@ const QuarterlyRaces = () => {
 
       <div className="z-10 w-3/4 grid-cols-3 grid-rows-3 gap-15 space-y-10 py-10 md:grid md:space-y-0">
         <div className="col-span-2 col-start-2 row-start-1">
-          <GalleryCard photoName="Fall '24" link="" image={Logo} />
+          <GalleryCard photoName="Fall" link="" image={Logo} />
         </div>
         <div className="col-span-2 col-start-1 row-start-2">
-          <GalleryCard photoName="Winter '25" link="" image={Logo} />
+          <GalleryCard photoName="Winter" link="" image={Logo} />
         </div>
         <div className="col-span-2 col-start-2 row-start-3">
-          <GalleryCard photoName="Spring '25" link="" image={Logo} />
+          <GalleryCard photoName="Spring" link="" image={Logo} />
         </div>
       </div>
     </div>
