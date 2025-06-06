@@ -13,14 +13,16 @@ const subHeaderAnimations = {
 };
 
 const paddleAnimations = {
-  initial: { x: -10 },
-  animate: { x: 0 },
+  initial: { x: -50, rotateZ: -50 },
+  animate: { x: 0, rotateZ: 0 },
   transition: { duration: 0.5 },
+  className: "absolute -top-40 left-30 -z-10 hidden w-145 xl:flex",
 };
 const dragonAnimations = {
-  initial: { opacity: 1 },
-  whileInView: { opacity: 0.5 },
-  transition: { duration: 0.5 },
+  initial: { opacity: 0.5 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 1 },
+  className: "absolute top-80 left-0 -z-10 hidden w-full md:flex",
 };
 
 const QuarterlyRaces = () => {
@@ -33,19 +35,11 @@ const QuarterlyRaces = () => {
       </motion.div>
 
       <motion.div {...paddleAnimations}>
-        <Image
-          src={Paddle}
-          alt="double paddle"
-          className="absolute -top-40 left-30 -z-10 hidden w-145 xl:flex"
-        />
+        <Image src={Paddle} alt="double paddle" className="relative" />
       </motion.div>
 
       <motion.div {...dragonAnimations}>
-        <Image
-          src={Dragon}
-          alt="dragon"
-          className="absolute top-80 left-0 -z-10 hidden w-full md:flex"
-        />
+        <Image src={Dragon} alt="dragon" className="relative w-full" />
       </motion.div>
 
       <div className="z-10 w-3/4 grid-cols-3 grid-rows-3 gap-15 space-y-10 py-10 md:grid md:space-y-0">
