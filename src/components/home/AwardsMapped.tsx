@@ -12,8 +12,8 @@ const AwardsMapped = () => {
         {Award.map((award, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 1.5 } }}
+            initial={{ opacity: 0, y : -50 }}
+            whileInView={{ opacity: 1, y : 0,  transition: { duration: 1.5 } }}
           >
             <AwardCard
               AwardImage={award.image}
