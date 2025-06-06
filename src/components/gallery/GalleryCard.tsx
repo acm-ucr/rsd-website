@@ -11,10 +11,9 @@ interface GalleryInfo {
 }
 
 const wrapAnimation = {
-  initial: { opacity: 0.5 },
-  whileInView: { opacity: 1 },
+  initial: { opacity: 0.5, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
   transition: { duration: 0.5 },
-  viewport: { once: true },
   className: "w-full",
 };
 
