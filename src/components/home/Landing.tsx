@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import dragon from "@/public/home/dragon2.webp";
 import fourStar from "@/public/4pointStar.webp";
@@ -5,7 +7,12 @@ import fiveStar from "@/public/5pointStar.webp";
 
 const Landing = () => {
   return (
-    <div className="bg-rsd-mid-blue relative m-10 flex w-11/12 items-center justify-center rounded-4xl p-5 text-center sm:w-9/12 md:w-8/12 lg:rounded-[75px]">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.5 }}
+      className="bg-rsd-mid-blue relative m-10 flex w-11/12 items-center justify-center rounded-4xl p-5 text-center sm:w-9/12 md:w-8/12 lg:rounded-[75px]"
+    >
       <div className="bg-rsd-dark-blue rounded-4xl lg:rounded-[75px]">
         <Image
           src={dragon}
@@ -52,7 +59,7 @@ const Landing = () => {
           environment.
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
