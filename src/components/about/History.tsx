@@ -9,7 +9,7 @@ const History = () => {
       <Image
         src={Dragon}
         alt="Dragon Boat Background"
-        className="absolute bottom-0 left-0 z-0 w-full object-cover"
+        className="absolute bottom-0 left-0 z-0 hidden w-full object-cover sm:bottom-20 sm:block md:bottom-13 lg:bottom-10 xl:bottom-5 2xl:-bottom-5"
       />
       <div className="z-10 flex w-full flex-col items-center px-6 py-14 text-center">
         <Header text="History of Dragon Boat" />
