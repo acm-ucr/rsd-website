@@ -21,6 +21,7 @@ const BoardMapping = () => {
             whileInView="display"
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
+            key={index}
           >
             <BoardCard
               key={index}
