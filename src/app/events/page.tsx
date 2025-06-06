@@ -45,7 +45,7 @@ const Events = () => {
       </div>
 
       <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-40">
-        <Header text="Past Events" />\
+        <Header text="Past Events" />
         <div className="flex w-10/12 flex-col justify-center gap-10 md:w-11/12 md:flex-row md:[&>*:nth-child(even)]:mt-40">
           <PastCard eventName="eventName" image={logo} />
           <PastCard eventName="eventName" image={logo} />

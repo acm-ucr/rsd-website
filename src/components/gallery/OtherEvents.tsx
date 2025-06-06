@@ -12,8 +12,8 @@ const OtherEvents = () => {
           Other Events
         </div>
         <div className="items-center justify-center gap-15 space-y-10 pb-10 md:flex md:space-y-0">
-          <GalleryCard photoName="Practices ‘24-’25" link="/" image={logo} />
-          <GalleryCard photoName="Socials ‘24-’25" link="/" image={logo} />
+          <GalleryCard photoName="Practices" link="/" image={logo} />
+          <GalleryCard photoName="Socials" link="/" image={logo} />
         </div>
       </div>
     </div>
