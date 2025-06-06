@@ -63,9 +63,9 @@ const PracticeWrapper = () => {
           </motion.div>
         </div>
       </div>
-       <motion.div
+      <motion.div
         animate={{ y: [0, -30, 0] }}
-        transition={{ duration: 5, repeat: Infinity }} 
+        transition={{ duration: 5, repeat: Infinity }}
       >
         <Image src={Wave} alt="wave" className="-mt-1 w-full scale-y-[-1]" />
       </motion.div>
