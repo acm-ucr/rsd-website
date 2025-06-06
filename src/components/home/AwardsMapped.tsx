@@ -2,7 +2,7 @@
 import Award from "@/data/AwardsInfo";
 import AwardCard from "@/components/home/AwardCard";
 import Header from "@/components/Header";
-import { easeInOut, motion } from "motion/react";
+import { motion } from "motion/react";
 
 const AwardsMapped = () => {
   return (
@@ -12,18 +12,10 @@ const AwardsMapped = () => {
         {Award.map((award, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -20, y: -100 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              transition: {
-                duration: 0.7,
-                delay: index * 0.2,
-                ease: easeInOut,
-              },
-            }}
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1, transition : { duration: 1.5 } }}
+
+            
           >
             <AwardCard
               AwardImage={award.image}
