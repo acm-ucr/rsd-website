@@ -14,22 +14,26 @@ const Store = () => {
     <div>
       <div className="relative flex w-screen flex-col items-center justify-center overflow-hidden">
         <Header text="Featured Products" />
-        <motion.div
-          transition={{
-            duration: 0.7,
-            delay: 0.4,
-          }}
-          initial={{ scale: 1, opacity: 0, y: 10, rotate: -7 }}
-          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-          className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0"
-        >
-          <ProductCard productName="Shirt" productPrice="$17.99" />
-          <ProductCard productName="Jacket" productPrice="$29.99" />
-        </motion.div>
+        <div className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0">
+          <motion.div
+            transition={{ duration: 0.7, delay: 0.4 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+          >
+            <ProductCard productName="Shirt" productPrice="$17.99" />
+          </motion.div>
+          <motion.div
+            transition={{ duration: 0.7, delay: 0.4 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+          >
+            <ProductCard productName="Jacket" productPrice="$29.99" />
+          </motion.div>
+        </div>
         <div className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]">
           <motion.div
             transition={{
-              duration: 1.3,
+              duration: 1,
               delay: 0.5,
             }}
             initial={{ scale: 1, opacity: 0, x: -1470 }}
@@ -46,8 +50,8 @@ const Store = () => {
 
           <motion.div
             transition={{
-              duration: 1.4,
-              delay: 1.8,
+              duration: 1,
+              delay: 0.5,
             }}
             initial={{ scale: 1, opacity: 0, x: -137 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,8 +62,8 @@ const Store = () => {
           </motion.div>
           <motion.div
             transition={{
-              duration: 1.4,
-              delay: 1.8,
+              duration: 1,
+              delay: 0.5,
             }}
             initial={{ scale: 1, opacity: 0, x: -137 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +75,7 @@ const Store = () => {
           <motion.div
             transition={{
               duration: 1,
-              delay: 3.2,
+              delay: 0.5,
             }}
             initial={{ scale: 1, opacity: 0 }}
             whileInView={{ opacity: 1 }}
