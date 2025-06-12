@@ -7,9 +7,9 @@ import Video from "@/components/home/Video";
 
 const Home = () => {
   return (
-    <div className = "">
+    <div className="">
       <Landing />
-      <Video/>
+      <Video />
       <AwardsMapped />
       <PracticeWrapper />
       <Header text="Gallery Preview" />

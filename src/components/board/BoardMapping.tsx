@@ -14,7 +14,7 @@ const BoardMapping = () => {
     <div className="flex flex-col items-center justify-center p-10">
       <Header text="Meet the Board!" />
       <div className="mt-10 grid grid-cols-1 gap-x-[10vw] gap-y-[5vh] md:grid-cols-2">
-        {boardMembers.map(({name, title, image, email, instagram}, index) => (
+        {boardMembers.map(({ name, title, image, email, instagram }, index) => (
           <motion.div
             variants={boardAnimation}
             initial="hidden"

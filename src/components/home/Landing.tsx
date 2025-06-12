@@ -7,7 +7,7 @@ import fiveStar from "@/public/5pointStar.webp";
 
 const Landing = () => {
   return (
-    <div className="flex w-full max-w-screen justify-center flex-col items-center">
+    <div className="flex w-full max-w-screen flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -53,11 +53,11 @@ const Landing = () => {
             Surging Dragons
           </div>
           <div className="font-rsd-alt item-center pt-2 text-center text-sm text-white sm:text-lg md:text-base xl:pt-4 xl:text-xl 2xl:text-2xl">
-            Riverside Surging Dragons is a dragon boat club at UCR, rooted in the
-            traditions of Chinese sport: dragon boat racing. We are a devoted team
-            of college students, eager to thrive in the water and build
-            everlasting friendships whilst fostering an inclusive and welcoming
-            environment.
+            Riverside Surging Dragons is a dragon boat club at UCR, rooted in
+            the traditions of Chinese sport: dragon boat racing. We are a
+            devoted team of college students, eager to thrive in the water and
+            build everlasting friendships whilst fostering an inclusive and
+            welcoming environment.
           </div>
         </div>
       </motion.div>

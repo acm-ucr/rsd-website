@@ -29,7 +29,7 @@ const Navbar = () => {
 
       <div className="mx-5 hidden grid-flow-col gap-6 text-2xl text-white md:grid">
         {items.map(({ name, link }, index) => (
-          <motion.div whileHover={{ scale: 1.1 }} key = {index}>
+          <motion.div whileHover={{ scale: 1.1 }} key={index}>
             <Link
               href={link}
               className={`${
@@ -74,7 +74,7 @@ const Navbar = () => {
             : "hidden"
         }
       >
-        {items.map(({ name, link}, idx) => (
+        {items.map(({ name, link }, idx) => (
           <Link
             key={idx}
             href={link}
