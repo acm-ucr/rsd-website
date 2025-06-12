@@ -1,3 +1,4 @@
+"use client";
 import GalleryCard from "./Card";
 import Image from "next/image";
 import wave from "@/public/wave.webp";

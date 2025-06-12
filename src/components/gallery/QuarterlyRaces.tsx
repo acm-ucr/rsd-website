@@ -1,3 +1,4 @@
+"use client";
 import GalleryCard from "@/components/gallery/Card";
 import Paddle from "@/public/doublePaddle.webp";
 import Logo from "@/public/RSDLogo.webp";
