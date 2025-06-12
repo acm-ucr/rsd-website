@@ -1,5 +1,5 @@
 "use client";
-import GalleryCard from "@/components/gallery/GalleryCard";
+import GalleryCard from "@/components/gallery/Card";
 import Paddle from "@/public/doublePaddle.webp";
 import Logo from "@/public/RSDLogo.webp";
 import Dragon from "@/public/gallery/dragonBody.webp";

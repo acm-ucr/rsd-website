@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import footerImage from "@/public/RSDLogo.webp";
-
-import { footerLinks } from "@/data/FooterLinks";
+import footerLinks from "@/data/FooterLinks";
 
 const Footer = () => {
   return (

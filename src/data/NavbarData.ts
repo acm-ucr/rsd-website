@@ -1,4 +1,4 @@
-export const items = [
+const items = [
   { name: "About", link: "/about" },
   { name: "Board", link: "/board" },
   { name: "Events", link: "/events" },
@@ -6,3 +6,5 @@ export const items = [
   { name: "Merch", link: "/store" },
   { name: "Join", link: "/join" },
 ];
+
+export default items;

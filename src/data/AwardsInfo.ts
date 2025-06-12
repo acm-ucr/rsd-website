@@ -6,6 +6,7 @@ export interface Award {
   name: string;
   image: StaticImageData;
 }
+
 const Awards: Award[] = [
   {
     name: "2010 College Cup Mixed 1st place C Division",

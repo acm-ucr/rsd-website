@@ -20,7 +20,7 @@ export interface BoardMember {
   instagram: string;
 }
 
-const boardMembers: BoardMember[] = [
+export const boardMembers: BoardMember[] = [
   {
     name: "Ethan Ho",
     title: "CAPTAIN",
@@ -106,5 +106,3 @@ const boardMembers: BoardMember[] = [
     instagram: "/",
   },
 ];
-
-export default boardMembers;

@@ -1,7 +1,7 @@
 import InfoBox from "../InfoBox";
 import Image from "next/image";
 import Star4Point from "@/public/4pointStar.webp";
-import { items } from "@/data/FeeLabels";
+import items from "@/data/FeeLabels";
 import Header from "@/components/Header";
 
 const Registration = () => {
@@ -22,8 +22,8 @@ const Registration = () => {
         <InfoBox
           text={
             <ul className="marker:text-rsd-gold list-outside list-disc">
-              {items.map((item, idx) => (
-                <li key={idx}>
+              {items.map((item, index) => (
+                <li key={index}>
                   <span className="text-rsd-gold">{item.label}:</span>{" "}
                   {item.description}
                 </li>
