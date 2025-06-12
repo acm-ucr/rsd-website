@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import UpcomingCard from "@/components/events/UpcomingCard";
 import Header from "@/components/Header";
@@ -24,8 +26,14 @@ const UpcomingEventsInfo = [
 const Events = () => {
   return (
     <div className="flex w-full max-w-screen flex-col items-center overflow-hidden">
-      <div className="relative flex w-full flex-col items-center">
-        <Header text="Upcoming Events" />
+      <Header text="Upcoming Events" />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative flex w-full flex-col items-center"
+      >
         <div className="mb-16 flex flex-wrap justify-center gap-y-8">
           {UpcomingEventsInfo.map(({ Month, Date, Name, Desc }, index) => (
             <UpcomingCard
@@ -40,12 +48,12 @@ const Events = () => {
         <Image
           src={EventsWave}
           alt="Waves with Oars"
-          className="absolute bottom-0 hidden w-screen object-fill md:-bottom-[13%] md:block"
+          className="absolute bottom-0 -z-10 hidden w-screen object-fill md:-bottom-[13%] md:block"
         />
-      </div>
+      </motion.div>
 
       <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-40">
-        <Header text="Past Events" />\
+        <Header text="Past Events" />
         <div className="flex w-10/12 flex-col justify-center gap-10 md:w-11/12 md:flex-row md:[&>*:nth-child(even)]:mt-40">
           <PastCard eventName="eventName" image={logo} />
           <PastCard eventName="eventName" image={logo} />

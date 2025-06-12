@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "motion/react";
+
 interface ComponentProps {
   month: string;
   date: string;
@@ -7,7 +10,12 @@ interface ComponentProps {
 
 const UpcomingCard = ({ month, date, name, desc }: ComponentProps) => {
   return (
-    <div className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-11/12 justify-center rounded-4xl p-10 text-white shadow-md md:w-4/5">
+    <motion.div
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.5 }}
+      className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-11/12 justify-center rounded-4xl p-10 text-white shadow-md md:w-4/5"
+    >
       <div className="flex w-2/5 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-4 text-center text-black md:w-1/3 md:p-10">
         <div className="text-2xl md:text-4xl">{month}</div>
         <div className="text-5xl md:text-7xl">{date}</div>
@@ -16,7 +24,7 @@ const UpcomingCard = ({ month, date, name, desc }: ComponentProps) => {
         <div className="text-xl font-bold md:text-5xl">{name}</div>
         <div className="text-sm font-bold md:text-xl">{desc}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,3 +1,4 @@
+"use client";
 import Carousel from "@/components/home/GalleryPreview";
 import PracticeWrapper from "@/components/home/PracticeWrapper";
 import Header from "@/components/Header";
@@ -7,7 +8,7 @@ import Video from "@/components/home/Video";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Landing />
       <Video />
       <AwardsMapped />
