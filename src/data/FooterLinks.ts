@@ -1,7 +1,7 @@
 import { FaInstagram, FaDiscord, FaYoutube } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
-export const footerLinks = [
+const footerLinks = [
   { name: "Mail", icon: Mail, url: "mailto:rsd.dragonboat@gmail.com" },
   { name: "Discord", icon: FaDiscord, url: "https://discord.gg/czUqmCBHnm" },
   {
@@ -15,3 +15,5 @@ export const footerLinks = [
     url: "https://youtube.com/@riversidesurgingdragons7640",
   },
 ];
+
+export default footerLinks;

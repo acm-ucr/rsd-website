@@ -14,7 +14,7 @@ const wrapAnimation = {
 
 const Header = ({ text }: HeaderProps) => {
   return (
-    <motion.div {...wrapAnimation}>
+    <motion.div {...wrapAnimation} className = "flex justify-center py-4">
       <div className="font-rsd-main text-rsd-title-blue text-center text-5xl sm:text-6xl xl:text-7xl">
         {text}
       </div>

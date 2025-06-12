@@ -61,7 +61,7 @@ const GalleryPreview = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <CarouselPrevious />
           <CarouselNext />
         </div>

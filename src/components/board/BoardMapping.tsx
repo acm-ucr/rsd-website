@@ -1,6 +1,6 @@
 "use client";
-import boardMembers from "@/data/BoardCards";
-import BoardCard from "@/components/board/BoardCard";
+import { boardMembers } from "@/data/BoardCards";
+import BoardCard from "@/components/board/Card";
 import Header from "@/components/Header";
 import { motion } from "motion/react";
 
@@ -13,8 +13,8 @@ const BoardMapping = () => {
   return (
     <div className="flex flex-col items-center justify-center p-10">
       <Header text="Meet the Board!" />
-      <div className="mt-10 grid grid-cols-1 gap-x-40 gap-y-20 md:grid-cols-2">
-        {boardMembers.map((member, index) => (
+      <div className="mt-10 grid grid-cols-1 gap-x-[10vw] gap-y-[5vh] md:grid-cols-2">
+        {boardMembers.map(({name, title, image, email, instagram}, index) => (
           <motion.div
             variants={boardAnimation}
             initial="hidden"
@@ -25,11 +25,11 @@ const BoardMapping = () => {
           >
             <BoardCard
               key={index}
-              name={member.name}
-              role={member.title}
-              image={member.image}
-              email={member.email}
-              instagram={member.instagram}
+              name={name}
+              role={title}
+              image={image}
+              email={email}
+              instagram={instagram}
             />
           </motion.div>
         ))}
