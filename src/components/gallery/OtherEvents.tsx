@@ -1,5 +1,5 @@
 "use client";
-import GalleryCard from "./GalleryCard";
+import GalleryCard from "./Card";
 import Image from "next/image";
 import wave from "@/public/wave.webp";
 import logo from "@/public/RSDLogo.webp";

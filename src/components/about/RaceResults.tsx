@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { slides, slide } from "@/data/ResultsInfo";
+import { slides } from "@/data/ResultsInfo";
 import Header from "@/components/Header";
 import { motion } from "motion/react";
 
@@ -34,16 +34,14 @@ const RaceResults = () => {
             className="w-[60vw]"
           >
             <CarouselContent>
-              {slides.map((slide: slide) => (
-                <CarouselItem key={slide.id} className="md:basis-1/3">
+              {slides.map(({ year, title, subtitle }, index) => (
+                <CarouselItem key={index} className="md:basis-1/3">
                   <Card className="bg-rsd-dark-blue border-none shadow-none">
                     <CardContent className="font-rsd-alt flex aspect-square flex-col items-center justify-center font-bold">
-                      <span className="text-rsd-yellow text-3xl">
-                        {slide.year}
-                      </span>
-                      <span className="text-lg text-white">{slide.title}</span>
+                      <span className="text-rsd-yellow text-3xl">{year}</span>
+                      <span className="text-lg text-white">{title}</span>
                       <span className="text-rsd-light-blue text-xs">
-                        {slide.subtitle}
+                        {subtitle}
                       </span>
                     </CardContent>
                   </Card>

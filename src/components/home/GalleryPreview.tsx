@@ -11,6 +11,12 @@ import {
 } from "@/components/ui/carousel";
 import { slides, slide } from "@/data/GalleryImages";
 import Image from "next/image";
+import { motion } from "motion/react";
+
+const animationFadeIn = {
+  initial: { opacity: 0, y: 10 },
+  whileInView: { opacity: 1, y: 0 },
+};
 
 const GalleryPreview = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -29,7 +35,13 @@ const GalleryPreview = () => {
   }, [api]);
 
   return (
-    <div className="relative mt-6 flex w-full flex-wrap items-center justify-center">
+    <motion.div
+      variants={animationFadeIn}
+      initial="initial"
+      whileInView="whileInView"
+      transition={{ duration: 0.7, delay: 0.4 }}
+      className="relative mt-6 flex w-full flex-wrap items-center justify-center"
+    >
       <Carousel
         opts={{
           loop: true,
@@ -61,7 +73,7 @@ const GalleryPreview = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <CarouselPrevious />
           <CarouselNext />
         </div>
@@ -75,7 +87,7 @@ const GalleryPreview = () => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
