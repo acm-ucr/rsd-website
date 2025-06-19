@@ -50,9 +50,9 @@ export const calendarSources = [
 
 const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [selectedEventTypes] = React.useState<string[]>(
-    calendarSources.map((source) => source.eventType),
-  );
+  //   const [selectedEventTypes] = React.useState<string[]>(
+  //     calendarSources.map((source) => source.eventType),
+  //   );
 
   const { data, isLoading } = useQuery<{
     allEvents: TypedGoogleEventProps[];
