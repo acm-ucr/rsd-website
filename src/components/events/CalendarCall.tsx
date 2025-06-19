@@ -2,12 +2,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Calendar as UICalendar } from "@/components/ui/calendar";
-import { Calendar as RBCalendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
-import "react-big-calendar/lib/css/react-big-calendar.css";
-import CustomEventPopover from "./week/CustomEvent";
-import "./week/index.css";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -50,14 +45,11 @@ export type CalendarEvent = {
 };
 
 export const calendarSources = [
-  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EVENTS, eventType: "general" },
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL, eventType: "general" },
 ];
-
-const localizer = momentLocalizer(moment);
 
 const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [isMonth, setIsMonth] = React.useState<boolean>(true);
   const [selectedEventTypes] = React.useState<string[]>(
     calendarSources.map((source) => source.eventType),
   );
@@ -115,58 +107,13 @@ const CalendarCall = () => {
     },
   });
 
-  // Convert Google events to react-big-calendar events
-  const calendarEvents = React.useMemo(() => {
-    if (!data?.allEvents) return [];
-    return data.allEvents
-      .map((event) => {
-        const startString = event.start?.dateTime || event.start?.date;
-        const endString = event.end?.dateTime || event.end?.date;
-        if (!startString || !endString) return null;
-        return {
-          title: event.summary ?? "Untitled Event",
-          start: new Date(startString),
-          end: new Date(endString),
-          allDay: !event.start?.dateTime,
-          resource: event,
-        };
-      })
-      .filter(
-        (
-          e,
-        ): e is {
-          title: string;
-          start: Date;
-          end: Date;
-          allDay: boolean;
-          resource: TypedGoogleEventProps;
-        } => e !== null,
-      );
-  }, [data]);
-
-  // Custom event renderer for react-big-calendar
-  const CustomEvent = ({ event }: { event: CalendarEvent }) => {
-    const resource = event.resource;
-    return (
-      <CustomEventPopover
-        startDate={resource.start}
-        endDate={resource.end}
-        title={event.title}
-        date={event.start}
-        location={resource.location}
-        description={resource.description}
-        eventType={resource.eventType}
-      />
-    );
-  };
-
   return (
     <div>
       {isLoading || !data ? (
         <div className="flex min-h-screen items-center justify-center">
           Loading...
         </div>
-      ) : isMonth ? (
+      ) : (
         <UICalendar
           mode="single"
           selected={date}
@@ -176,8 +123,6 @@ const CalendarCall = () => {
             selectedEventTypes.includes(event.eventType),
           )}
         />
-      ) : (
-        <div className="rounded-calendar-top mx-auto h-[150vh] w-10/12 pb-8"></div>
       )}
     </div>
   );

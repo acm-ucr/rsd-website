@@ -69,7 +69,7 @@ const CalendarEventPopover = ({
   return (
     <Dialog>
       <DialogTrigger
-        className={`flex w-full cursor-pointer justify-between py-1 ${eventType === "general" ? "bg-acm-blue-700 !text-white" : ""} ${eventType === "spark" ? "bg-acm-yellow-200" : ""} ${eventType === "forge" ? "bg-acm-gray-100" : ""} ${eventType === "create" ? "bg-acm-blue-200" : ""} ${eventType === "das" ? "bg-acm-purple-300" : ""} ${eventType === "bitbyte" ? "!bg-acm-green-500" : ""} text-left hover:opacity-75`}
+        className={`bg-rsd-gold flex w-full cursor-pointer justify-between py-1 ${eventType === "general"} text-left hover:opacity-75`}
       >
         <span className="overflow-hidden px-1 pl-1 text-xs text-ellipsis whitespace-nowrap">
           {title}
@@ -85,7 +85,7 @@ const CalendarEventPopover = ({
       </DialogTrigger>
       <DialogOverlay className="bg-gray-400/60">
         <DialogContent className="z-50 w-[80vw] border-2 border-black bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
-          <div className="grid grid-cols-4 px-4 py-2 text-xl font-semibold">
+          <div className="bg-rsd-yellow grid grid-cols-4 rounded-t-md border-b-2 border-black px-4 py-2 text-xl font-semibold">
             <p className="col-span-3">{title}</p>
             <p className="flex justify-end">
               {date.toLocaleString("default", {
