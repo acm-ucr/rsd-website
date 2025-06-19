@@ -4,6 +4,7 @@ import {
   DialogTrigger,
   DialogOverlay,
 } from "@/components/ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 interface CalendarEventPopoverProps {
   startDate: {
     dateTime?: string;
@@ -85,6 +86,7 @@ const CalendarEventPopover = ({
       </DialogTrigger>
       <DialogOverlay className="bg-gray-400/60">
         <DialogContent className="z-50 w-[80vw] border-2 border-black bg-white p-0 shadow-md md:w-[40vw] 2xl:w-[30vw]">
+          <DialogTitle className="hidden"></DialogTitle>
           <div className="bg-rsd-yellow grid grid-cols-4 rounded-t-md border-b-2 border-black px-4 py-2 text-xl font-semibold">
             <p className="col-span-3">{title}</p>
             <p className="flex justify-end">
