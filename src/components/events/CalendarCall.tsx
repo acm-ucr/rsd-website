@@ -53,7 +53,6 @@ const CalendarCall = () => {
   const [selectedEventTypes] = React.useState<string[]>(
     calendarSources.map((source) => source.eventType),
   );
-  const isMobile = useWindowWidth() < 768;
 
   const { data, isLoading } = useQuery<{
     allEvents: TypedGoogleEventProps[];
