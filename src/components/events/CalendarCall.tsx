@@ -118,9 +118,9 @@ const CalendarCall = () => {
           selected={date}
           onSelect={setDate}
           className="bg-rsd-dark-blue m-5 mx-auto w-11/12 rounded-4xl px-10 py-3 md:w-10/12"
-          events={data.allEvents.filter((event) =>
-            selectedEventTypes.includes(event.eventType),
-          )}
+          //   events={data.allEvents.filter((event) =>
+          //     selectedEventTypes.includes(event.eventType),
+          //   )}
         />
       )}
     </div>
