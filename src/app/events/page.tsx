@@ -7,6 +7,8 @@ import EventsWave from "@/public/events/eventsWave.webp";
 import PastCard from "@/components/events/PastCard";
 import Cloud from "@/public/cloud.webp";
 import logo from "@/public/RSDLogo.webp";
+import Calendar from "@/components/events/CalendarCall";
+import Star from "@/public/4pointStar.webp";
 
 const UpcomingEventsInfo = [
   {
@@ -51,8 +53,27 @@ const Events = () => {
           className="absolute bottom-0 -z-10 hidden w-screen object-fill md:-bottom-[13%] md:block"
         />
       </motion.div>
-
-      <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-40">
+      <div className="relative w-full">
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute top-45 left-27 scale-175 rotate-45"
+        />
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute top-45 left-50 scale-60 rotate-60"
+        />
+        <div className="mt-40 w-full">
+          <Calendar />
+        </div>
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute right-25 -bottom-3 scale-60 -rotate-20"
+        />
+      </div>
+      <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-15">
         <Header text="Past Events" />
         <div className="flex w-10/12 flex-col justify-center gap-10 md:w-11/12 md:flex-row md:[&>*:nth-child(even)]:mt-40">
           <PastCard eventName="eventName" image={logo} />
