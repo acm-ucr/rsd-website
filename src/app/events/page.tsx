@@ -57,20 +57,20 @@ const Events = () => {
         <Image
           src={Star}
           alt="Star"
-          className="absolute top-45 left-27 scale-175 rotate-45"
+          className="absolute top-45 left-27 hidden scale-175 rotate-45 sm:block"
         />
         <Image
           src={Star}
           alt="Star"
-          className="absolute top-45 left-50 scale-60 rotate-60"
+          className="absolute top-45 left-50 hidden scale-60 rotate-60 sm:block"
         />
-        <div className="mt-40 w-full">
+        <div className="mt-5 w-full md:mt-40">
           <Calendar />
         </div>
         <Image
           src={Star}
           alt="Star"
-          className="absolute right-25 -bottom-3 scale-60 -rotate-20"
+          className="absolute right-25 -bottom-3 hidden scale-60 -rotate-20 sm:block"
         />
       </div>
       <div className="relative flex w-full max-w-screen flex-col items-center pb-20 md:mt-15">
