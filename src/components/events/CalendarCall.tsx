@@ -1,0 +1,130 @@
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
+import { Calendar as UICalendar } from "@/components/ui/calendar";
+import { useQuery } from "@tanstack/react-query";
+
+export function useWindowWidth() {
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1024,
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return width;
+}
+
+export type GoogleEventProps = {
+  start: {
+    dateTime?: string;
+    date?: string;
+  };
+  end: {
+    dateTime?: string;
+    date?: string;
+  };
+  location?: string;
+  description?: string;
+  summary: string;
+};
+
+export type TypedGoogleEventProps = GoogleEventProps & {
+  eventType: string;
+};
+
+export type CalendarEvent = {
+  title: string;
+  start: Date;
+  end: Date;
+  allDay: boolean;
+  resource: TypedGoogleEventProps;
+};
+
+export const calendarSources = [
+  { id: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL, eventType: "general" },
+];
+
+const CalendarCall = () => {
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
+  const [selectedEventTypes] = React.useState<string[]>(
+    calendarSources.map((source) => source.eventType),
+  );
+
+  const { data, isLoading } = useQuery<{
+    allEvents: TypedGoogleEventProps[];
+    futureEvents: TypedGoogleEventProps[];
+  }>({
+    queryKey: ["googleCalendarEvents"],
+    queryFn: async () => {
+      const now = new Date();
+      const tenWeeksAgo = new Date(
+        now.getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
+      ).toISOString();
+      const tenWeeksAhead = new Date(
+        now.getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
+      ).toISOString();
+
+      const results = await Promise.all(
+        calendarSources.map(async ({ id, eventType }) => {
+          try {
+            const res = await fetch(
+              `https://www.googleapis.com/calendar/v3/calendars/${id}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${tenWeeksAgo}&timeMax=${tenWeeksAhead}`,
+            );
+
+            if (!res.ok) {
+              console.warn(`Failed to fetch ${eventType} calendar`);
+              return [];
+            }
+
+            const data = await res.json();
+
+            return (data.items || []).map((item: GoogleEventProps) => ({
+              ...item,
+              eventType,
+            }));
+          } catch (err) {
+            console.error(`Error fetching ${eventType} events`, err);
+            return [];
+          }
+        }),
+      );
+
+      const allEvents: TypedGoogleEventProps[] = results.flat();
+
+      const futureEvents = allEvents
+        .filter((item) => {
+          const startString = item.start?.dateTime || item.start?.date;
+          return startString && new Date(startString) >= now;
+        })
+        .slice(0, 3);
+
+      return { allEvents, futureEvents };
+    },
+  });
+
+  return (
+    <div>
+      {isLoading || !data ? (
+        <div className="flex min-h-screen items-center justify-center">
+          Loading...
+        </div>
+      ) : (
+        <UICalendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="bg-rsd-dark-blue m-5 mx-auto w-11/12 rounded-4xl px-10 py-3 md:w-10/12"
+          events={data.allEvents.filter((event) =>
+            selectedEventTypes.includes(event.eventType),
+          )}
+        />
+      )}
+    </div>
+  );
+};
+
+export default CalendarCall;
