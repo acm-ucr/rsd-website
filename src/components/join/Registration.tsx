@@ -1,7 +1,7 @@
 "use client";
 import InfoBox from "../InfoBox";
 import Image from "next/image";
-import Star4Point from "@/public/4pointStar.webp";
+import Star4Point from "@/public/4pointStar.svg";
 import items from "@/data/FeeLabels";
 import Header from "@/components/Header";
 import { motion } from "motion/react";

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import InfoBox from "@/components/InfoBox";
 import Image from "next/image";
 import Paddles from "@/public/doublePaddle.webp";
-import Star4Point from "@/public/4pointStar.webp";
+import Star4Point from "@/public/4pointStar.svg";
 
 const AboutUs = () => {
   return (
@@ -16,12 +16,12 @@ const AboutUs = () => {
         <Image
           src={Star4Point}
           alt="Four Point Star"
-          className="absolute top-6 left-[8%] size-10 rotate-45 md:top-0 md:left-[7%] md:size-20"
+          className="absolute top-6 left-[12%] size-10 rotate-45 md:top-20 md:left-17 md:size-10"
         />
         <Image
           src={Star4Point}
           alt="Four Point Star"
-          className="absolute top-12 left-[3%] size-8 md:top-[9%] md:size-15"
+          className="absolute top-12 left-[8%] size-8 md:top-[12%] md:size-15"
         />
         <Image
           src={Paddles}
