@@ -14,7 +14,7 @@ const History = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="absolute bottom-0 left-0 z-0 hidden w-full object-cover sm:bottom-20 sm:block md:bottom-13 lg:bottom-10 xl:bottom-5 2xl:-bottom-5"
       >
-        <Image src={Dragon} alt="Dragon Boat Background" />
+        <Image src={Dragon} alt="Dragon Boat Background" className="w-full" />
       </motion.div>
       <div className="z-10 flex w-full flex-col items-center px-6 py-14 text-center">
         <Header text="History of Dragon Boat" />
