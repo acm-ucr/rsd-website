@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import ProductCard from "@/components/store/ProductCard";
+import Card from "@/components/store/Card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import storeWave from "@/public/store/storeWave.webp";
@@ -12,30 +12,24 @@ const FeaturedProducts = () => {
   return (
     <div className="relative flex w-screen flex-col items-center justify-center overflow-hidden">
       <Header text="Featured Products" />
-      <div className="flex flex-col items-center justify-center pt-4 md:flex-row md:pt-0">
-        <motion.div
-          transition={{ duration: 0.7, delay: 0.4 }}
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-        >
-          <ProductCard productName="Shirt" productPrice="$17.99" />
-        </motion.div>
-        <motion.div
-          transition={{ duration: 0.7, delay: 0.4 }}
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-        >
-          <ProductCard productName="Jacket" productPrice="$29.99" />
-        </motion.div>
-      </div>
+      <motion.div
+        transition={{ duration: 0.7, delay: 0.4 }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="flex flex-col items-center justify-center pb-4 lg:flex-row lg:pb-15"
+      >
+        <Card productName="Jersey(men's)" productPrice="$17.99" />
+        <Card productName="Jersey(women's)" productPrice="$17.99" />
+        <Card productName="Jacket" productPrice="$29.99" />
+      </motion.div>
       <div className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]">
         <motion.div
           transition={{
             duration: 1,
             delay: 0.5,
           }}
-          initial={{ scale: 1, opacity: 0, x: -1470 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ scale: 1, opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="absolute bottom-4 left-0 -z-10 hidden w-full object-cover md:block"
         >

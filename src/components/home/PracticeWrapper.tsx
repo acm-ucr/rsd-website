@@ -39,7 +39,6 @@ const PracticeWrapper = () => {
               }
             />
           </div>
-
           <div className="flex items-center justify-center md:w-1/3">
             <InfoBox
               text={
