@@ -11,7 +11,7 @@ const PastCard = ({ eventName, image }: ComponentProps) => {
         <Image
           src={image}
           alt="Image of past event"
-          className="size-full object-contain"
+          className="size-full rounded-t-2xl object-contain"
         />
       </div>
       <div className="flex h-1/5 items-center justify-center rounded-b-2xl bg-white">

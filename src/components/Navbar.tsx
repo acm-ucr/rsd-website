@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/RSDLogo.webp";
-import { items } from "@/data/NavbarData";
+import items from "@/data/NavbarData";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion } from "motion/react";
@@ -28,8 +28,8 @@ const Navbar = () => {
       </motion.div>
 
       <div className="mx-5 hidden grid-flow-col gap-6 text-2xl text-white md:grid">
-        {items.map(({ name, link }) => (
-          <motion.div whileHover={{ scale: 1.1 }} key={name}>
+        {items.map(({ name, link }, index) => (
+          <motion.div whileHover={{ scale: 1.1 }} key={index}>
             <Link
               href={link}
               className={`${
@@ -74,9 +74,9 @@ const Navbar = () => {
             : "hidden"
         }
       >
-        {items.map(({ name, link }) => (
+        {items.map(({ name, link }, idx) => (
           <Link
-            key={name}
+            key={idx}
             href={link}
             className={`${
               pathname === link ? "text-rsd-yellow" : "hover:text-rsd-yellow"

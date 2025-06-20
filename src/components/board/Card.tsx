@@ -1,8 +1,10 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import RSDLogo from "@/public/RSDLogo.webp";
 import { Mail } from "lucide-react";
 import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 interface BoardCardProps {
   name: string;
@@ -11,6 +13,11 @@ interface BoardCardProps {
   email: string;
   instagram: string;
 }
+
+const iconAnimation = {
+  hidden: { opacity: 0 },
+  display: { opacity: 1 },
+};
 
 const BoardCard = ({ name, role, image, email, instagram }: BoardCardProps) => {
   return (
@@ -27,12 +34,28 @@ const BoardCard = ({ name, role, image, email, instagram }: BoardCardProps) => {
         </div>
       </div>
       <div className="flex w-full flex-row place-items-end justify-end">
-        <Link href={email}>
-          <Mail className="flex h-12 w-12 text-white" />
-        </Link>
-        <Link href={instagram}>
-          <AiFillInstagram className="flex text-5xl text-white" />
-        </Link>
+        <motion.div
+          variants={iconAnimation}
+          initial="hidden"
+          whileInView="display"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Link href={email}>
+            <Mail className="flex h-12 w-12 text-white" />
+          </Link>
+        </motion.div>
+        <motion.div
+          variants={iconAnimation}
+          initial="hidden"
+          whileInView="display"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Link href={instagram}>
+            <AiFillInstagram className="flex text-5xl text-white" />
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
