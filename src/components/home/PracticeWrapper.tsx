@@ -57,7 +57,7 @@ const PracticeWrapper = () => {
           <PracticeShuttle />
           <motion.div whileHover={{ scale: 1.05 }} className="p-6">
             <Button className="bg-rsd-gold hover:bg-rsd-yellow font-rsd-alt rounded-full p-10 text-center text-2xl font-bold text-black md:text-3xl">
-              <Link href="/">more events!</Link>
+              <Link href="/events">more events!</Link>
             </Button>
           </motion.div>
         </div>

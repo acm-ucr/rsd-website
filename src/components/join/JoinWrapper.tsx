@@ -30,7 +30,9 @@ const JoinWrapper = () => {
               quarter and a discounted $150 for a yearly membership. Join our
               discord for more information about how to register for membership!
               <Button className="bg-rsd-mid-blue hover:bg-rsd-title-blue mt-5 rounded-4xl p-7 text-lg sm:text-xl xl:p-8 xl:text-3xl">
-                <Link href="/">Join Our Discord!</Link>
+                <Link href="https://discord.gg/czUqmCBHnm" target="_blank">
+                  Join Our Discord!
+                </Link>
               </Button>
             </div>
           }
