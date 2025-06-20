@@ -31,8 +31,16 @@ const OtherEvents = () => {
           </div>
         </motion.div>
         <div className="items-center justify-center gap-15 space-y-10 pb-10 md:flex md:space-y-0">
-          <GalleryCard photoName="Practices" link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln" image={logo} />
-          <GalleryCard photoName="Socials" link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln" image={logo} />
+          <GalleryCard
+            photoName="Practices"
+            link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
+            image={logo}
+          />
+          <GalleryCard
+            photoName="Socials"
+            link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
+            image={logo}
+          />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import Cloud from "@/public/cloud.webp";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Logo from "@/public/RSDLogo.webp";
-import Jersey from "@/public/store/Jersey1.jpg"
+import Jersey from "@/public/store/Jersey1.jpg";
 
 const FeaturedProducts = () => {
   return (

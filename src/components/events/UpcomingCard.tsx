@@ -16,7 +16,7 @@ const UpcomingCard = ({ month, date, name, desc }: ComponentProps) => {
       transition={{ duration: 0.7, delay: 0.5 }}
       className="bg-rsd-dark-blue font-rsd-alt flex h-1/2 w-11/12 justify-center rounded-4xl p-10 text-white shadow-md md:w-4/5"
     >
-      <div className="flex w-2/5 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-4 text-center text-black md:w-1/3 md:p-10">
+      <div className="flex w-2/5 shrink-0 flex-col items-center justify-center gap-y-8 rounded-3xl bg-white p-4 text-center text-black md:w-2/7 md:p-10">
         <div className="text-2xl md:text-4xl">{month}</div>
         <div className="text-5xl md:text-7xl">{date}</div>
       </div>

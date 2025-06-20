@@ -50,10 +50,14 @@ const RaceResults = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent z-10" />
-            <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent z-10" />
+            <CarouselPrevious className="text-rsd-light-blue absolute left-2 z-10 bg-transparent" />
+            <CarouselNext className="text-rsd-light-blue absolute right-2 z-10 bg-transparent" />
           </Carousel>
-          <Image src={GalleryWave} alt="wave" className="absolute bottom-0 rounded-b-4xl "/>
+          <Image
+            src={GalleryWave}
+            alt="wave"
+            className="absolute bottom-0 rounded-b-4xl"
+          />
         </div>
       </motion.div>
     </div>
