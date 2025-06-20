@@ -21,9 +21,9 @@ const UpcomingEventsInfo = [
 ];
 
 const UpcomingSection = () => {
-    return(
-        <div className="flex flex-col items-center w-full">
-<Header text="Upcoming Events" />
+  return (
+    <div className="flex w-full flex-col items-center">
+      <Header text="Upcoming Events" />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +48,8 @@ const UpcomingSection = () => {
           className="absolute bottom-0 -z-10 hidden w-screen object-fill md:-bottom-[13%] md:block"
         />
       </motion.div>
-        </div>
-        
-    );
-}
+    </div>
+  );
+};
 
 export default UpcomingSection;
