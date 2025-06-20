@@ -1,10 +1,17 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Calendar from "@/components/events/CalendarCall";
 import Star from "@/public/4pointStar.svg";
 
 const CalendarWrapper = () => {
   return (
-    <div className="relative w-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, delay: 1 }}
+      className="relative w-full"
+    >
       <Image
         src={Star}
         alt="Star"
@@ -23,7 +30,7 @@ const CalendarWrapper = () => {
         alt="Star"
         className="absolute right-15 -bottom-10 hidden scale-30 rotate-20 sm:block"
       />
-    </div>
+    </motion.div>
   );
 };
 
