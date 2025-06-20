@@ -10,6 +10,8 @@ import {
 import { slides } from "@/data/ResultsInfo";
 import Header from "@/components/Header";
 import { motion } from "motion/react";
+import Image from "next/image";
+import GalleryWave from "@/public/about/galleryWave.webp";
 
 const carouselAnimation = {
   initial: { opacity: 0, y: 30 },
@@ -26,7 +28,7 @@ const RaceResults = () => {
         whileInView="whileInView"
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-rsd-dark-blue mb-10 flex w-[60vw] flex-col items-center rounded-4xl px-5 py-15">
+        <div className="bg-rsd-dark-blue relative mb-10 flex w-[60vw] flex-col items-center rounded-4xl px-5 py-15">
           <Carousel
             opts={{
               loop: false,
@@ -48,9 +50,10 @@ const RaceResults = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent" />
-            <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent" />
+            <CarouselPrevious className="text-rsd-light-blue absolute left-2 bg-transparent z-10" />
+            <CarouselNext className="text-rsd-light-blue absolute right-2 bg-transparent z-10" />
           </Carousel>
+          <Image src={GalleryWave} alt="wave" className="absolute bottom-0 rounded-b-4xl "/>
         </div>
       </motion.div>
     </div>

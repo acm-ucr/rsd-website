@@ -7,6 +7,8 @@ import storeWave from "@/public/store/storeWave.webp";
 import Cloud from "@/public/cloud.webp";
 import Link from "next/link";
 import Header from "@/components/Header";
+import Logo from "@/public/RSDLogo.webp";
+import Jersey from "@/public/store/Jersey1.jpg"
 
 const FeaturedProducts = () => {
   return (
@@ -18,9 +20,8 @@ const FeaturedProducts = () => {
         whileInView={{ opacity: 1, x: 0 }}
         className="flex flex-col items-center justify-center pb-4 lg:flex-row lg:pb-15"
       >
-        <Card productName="Jersey(men's)" productPrice="$17.99" />
-        <Card productName="Jersey(women's)" productPrice="$17.99" />
-        <Card productName="Jacket" productPrice="$29.99" />
+        <Card productName="Jersey" productPrice="$46.00" productImg={Jersey} />
+        <Card productName="Tank Top" productPrice="$40.00" productImg={Logo} />
       </motion.div>
       <div className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]">
         <motion.div

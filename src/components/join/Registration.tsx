@@ -1,5 +1,5 @@
 "use client";
-import InfoBox from "../InfoBox";
+import InfoBox from "@/components/InfoBox";
 import Image from "next/image";
 import Star4Point from "@/public/4pointStar.svg";
 import items from "@/data/FeeLabels";
