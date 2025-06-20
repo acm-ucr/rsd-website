@@ -75,7 +75,7 @@ const UpcomingSection = () => {
         viewport={{ once: true }}
         className="relative flex w-full flex-col items-center"
       >
-        <div className="mb-16 flex w-full flex-wrap justify-center gap-y-8">
+        <div className="mb-16 flex w-full flex-wrap justify-center gap-y-8 md:w-10/12">
           {data?.futureEvents ? (
             data.futureEvents
               ?.filter((event: GoogleEventProps) => {
