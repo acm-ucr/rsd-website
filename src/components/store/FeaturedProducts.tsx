@@ -75,7 +75,9 @@ const FeaturedProducts = () => {
           viewport={{ once: true }}
         >
           <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-10 text-center text-xl font-bold text-white hover:scale-110 hover:bg-blue-900 md:p-12 md:text-3xl lg:p-15 lg:text-5xl">
-            <Link href="https://forms.gle/ND5J6C3FVt3jseaNA">order form!</Link>
+            <Link href="https://forms.gle/ND5J6C3FVt3jseaNA" target="_blank">
+              order form!
+            </Link>
           </Button>
         </motion.div>
       </div>
