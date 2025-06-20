@@ -1,13 +1,13 @@
-import ArielLee from "@/public/board/ArielLee.jpg";
-import CandiceHsieh from "@/public/board/CandiceHsieh.jpg";
-import BryanNguyen from "@/public/board/BryanNguyen.jpg";
-import JeffreyDeLeon from "@/public/board/JeffreyDeLeon.jpg";
-import JustinLee from "@/public/board/JustinLee.jpg";
-import JustinChao from "@/public/board/JustinChao.jpg";
-import MaisieKallner from "@/public/board/MaisieKallner.jpg";
-import NathanTan from "@/public/board/NathanTan.jpg";
-import VictorXia from "@/public/board/VictorXia.jpg";
-import AngelicaLee from "@/public/board/AngelicaLee.jpg";
+import ArielLee from "@/public/board/ArielLee.webp";
+import CandiceHsieh from "@/public/board/CandiceHsieh.webp";
+import BryanNguyen from "@/public/board/BryanNguyen.webp";
+import JeffreyDeLeon from "@/public/board/JeffreyDeLeon.webp";
+import JustinLee from "@/public/board/JustinLee.webp";
+import JustinChao from "@/public/board/JustinChao.webp";
+import MaisieKallner from "@/public/board/MaisieKallner.webp";
+import NathanTan from "@/public/board/NathanTan.webp";
+import VictorXia from "@/public/board/VictorXia.webp";
+import AngelicaLee from "@/public/board/AngelicaLee.webp";
 import { StaticImageData } from "next/image";
 
 export interface BoardMember {

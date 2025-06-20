@@ -2,9 +2,9 @@
 import { motion } from "motion/react";
 import PastCard from "@/components/events/PastCard";
 import Cloud from "@/public/cloud.webp";
-import CollegeCup from "@/public/events/collegeCup.png";
-import Tempe from "@/public/events/tempe.png";
-import BBLB from "@/public/events/bblb.png";
+import CollegeCup from "@/public/events/collegeCup.webp";
+import Tempe from "@/public/events/tempe.webp";
+import BBLB from "@/public/events/bblb.webp";
 import Header from "@/components/Header";
 import Image from "next/image";
 
