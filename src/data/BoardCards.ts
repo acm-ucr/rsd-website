@@ -1,15 +1,13 @@
 import ArielLee from "@/public/board/ArielLee.webp";
 import CandiceHsieh from "@/public/board/CandiceHsieh.webp";
-import EmilyHuang from "@/public/board/EmilyHuang.webp";
-import EthanHo from "@/public/board/EthanHo.webp";
-import JocelynLee from "@/public/board/JocelynLee.webp";
+import BryanNguyen from "@/public/board/BryanNguyen.webp";
+import JeffreyDeLeon from "@/public/board/JeffreyDeLeon.webp";
+import JustinLee from "@/public/board/JustinLee.webp";
 import JustinChao from "@/public/board/JustinChao.webp";
-import LaurenChou from "@/public/board/LaurenChou.webp";
+import MaisieKallner from "@/public/board/MaisieKallner.webp";
 import NathanTan from "@/public/board/NathanTan.webp";
-import PatrickGao from "@/public/board/PatrickGao.webp";
-import QuentinPhillips from "@/public/board/QuentinPhillips.webp";
-import AnishkaDhruv from "@/public/board/AnishkaDhruv.webp";
-import JustinShiu from "@/public/board/JustinShiu.webp";
+import VictorXia from "@/public/board/VictorXia.webp";
+import AngelicaLee from "@/public/board/AngelicaLee.webp";
 import { StaticImageData } from "next/image";
 
 export interface BoardMember {
@@ -22,87 +20,73 @@ export interface BoardMember {
 
 export const boardMembers: BoardMember[] = [
   {
-    name: "Ethan Ho",
-    title: "CAPTAIN",
-    image: EthanHo,
-    email: "/",
-    instagram: "/",
-  },
-  {
-    name: "Justin Chao",
-    title: "TEAM MANAGER",
-    image: JustinChao,
-    email: "/",
-    instagram: "/",
-  },
-  {
     name: "Ariel Lee",
-    title: "TEAM MANAGER",
+    title: "CAPTAIN",
     image: ArielLee,
-    email: "/",
+    email: "mailto:alee537@ucr.edu",
+    instagram: "/",
+  },
+  {
+    name: "Nathan Tan",
+    title: "TEAM MANAGER",
+    image: NathanTan,
+    email: "mailto:ntan018@ucr.edu",
+    instagram: "/",
+  },
+  {
+    name: "Victor Xia",
+    title: "TEAM MANAGER",
+    image: VictorXia,
+    email: "mailto:vxia002@ucr.edu",
     instagram: "/",
   },
   {
     name: "Candice Hsieh",
     title: "TREASURER",
     image: CandiceHsieh,
-    email: "/",
+    email: "mailto:shsie017@ucr.edu",
     instagram: "/",
   },
   {
-    name: "Patrick Gao",
-    title: "OUTREACH/FUNDRAISING",
-    image: PatrickGao,
-    email: "/",
+    name: "JustinChao",
+    title: "OUTREACH",
+    image: JustinChao,
+    email: "mailto:jchao035@ucr.edu",
     instagram: "/",
   },
   {
-    name: "Nathan Tan",
-    title: "SOCIAL CHAIR",
-    image: NathanTan,
-    email: "/",
-    instagram: "/",
-  },
-  {
-    name: "Emily Huang",
-    title: "PR CHAIR",
-    image: EmilyHuang,
-    email: "/",
-    instagram: "/",
-  },
-  {
-    name: "Lauren Chou",
-    title: "PR CHAIR",
-    image: LaurenChou,
-    email: "/",
-    instagram: "/",
-  },
-  {
-    name: "Anishka Durvasula",
-    title: "PR CHAIR",
-    image: AnishkaDhruv,
-    email: "/",
-    instagram: "/",
-  },
-  {
-    name: "Jocelyn Lee",
+    name: "Justin Lee",
     title: "WATER COACH",
-    image: JocelynLee,
-    email: "/",
+    image: JustinLee,
+    email: "mailto:mwu169@ucr.edu",
     instagram: "/",
   },
   {
-    name: "Justin Shiu",
-    title: "WATER COACH",
-    image: JustinShiu,
-    email: "/",
+    name: "Angelica Lee",
+    title: "ASSISTAN WATER COACH",
+    image: AngelicaLee,
+    email: "mailto:alee558@ucr.edu",
     instagram: "/",
   },
   {
-    name: "Quentin Phillips",
+    name: "Bryan Nguyen",
     title: "LAND COACH",
-    image: QuentinPhillips,
-    email: "/",
+    image: BryanNguyen,
+    email: "mailto:bnguy447@ucr.edu",
+    instagram: "/",
+  },
+  {
+    name: "Jeffrey De Leon",
+    title: "SOCIAL CHAIR",
+    image: JeffreyDeLeon,
+    email: "mailto:jdele030@ucr.edu",
+    instagram: "/",
+  },
+  {
+    name: "Maisie Kallner",
+    title: "PR CHAIR",
+    image: MaisieKallner,
+    email: "mailto:mkall003@ucr.edu",
     instagram: "/",
   },
 ];

@@ -1,10 +1,12 @@
 "use client";
 import GalleryCard from "@/components/gallery/Card";
 import Paddle from "@/public/doublePaddle.webp";
-import Logo from "@/public/RSDLogo.webp";
 import Dragon from "@/public/gallery/dragonBody.webp";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Tempe from "@/public/events/tempe.webp";
+import CollegeCup from "@/public/events/collegeCup.webp";
+import BBLB from "@/public/events/bblb.webp";
 
 const subHeaderAnimations = {
   initial: { opacity: 0.5, y: 10 },
@@ -44,13 +46,25 @@ const QuarterlyRaces = () => {
 
       <div className="z-10 w-3/4 grid-cols-3 grid-rows-3 gap-15 space-y-10 py-10 md:grid md:space-y-0">
         <div className="col-span-2 col-start-2 row-start-1">
-          <GalleryCard photoName="Fall" link="" image={Logo} />
+          <GalleryCard
+            photoName="Fall"
+            link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
+            image={CollegeCup}
+          />
         </div>
         <div className="col-span-2 col-start-1 row-start-2">
-          <GalleryCard photoName="Winter" link="" image={Logo} />
+          <GalleryCard
+            photoName="Winter"
+            link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
+            image={Tempe}
+          />
         </div>
         <div className="col-span-2 col-start-2 row-start-3">
-          <GalleryCard photoName="Spring" link="" image={Logo} />
+          <GalleryCard
+            photoName="Spring"
+            link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
+            image={BBLB}
+          />
         </div>
       </div>
     </div>
