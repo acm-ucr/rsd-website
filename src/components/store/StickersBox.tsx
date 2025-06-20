@@ -1,7 +1,7 @@
 import Image from "next/image";
 import DragonFrame from "@/public/store/dragonFrame.webp";
 import stickerWave from "@/public/store/stickersWave.webp";
-import star from "@/public/4pointStar.webp";
+import star from "@/public/4pointStar.svg";
 
 const StickersBox = () => {
   return (

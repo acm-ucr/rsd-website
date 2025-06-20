@@ -2,8 +2,8 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import dragon from "@/public/home/dragon2.webp";
-import fourStar from "@/public/4pointStar.webp";
-import fiveStar from "@/public/5pointStar.webp";
+import fourStar from "@/public/4pointStar.svg";
+import fiveStar from "@/public/5pointStar.svg";
 
 const Landing = () => {
   return (
