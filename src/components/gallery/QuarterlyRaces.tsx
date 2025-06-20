@@ -4,9 +4,9 @@ import Paddle from "@/public/doublePaddle.webp";
 import Dragon from "@/public/gallery/dragonBody.webp";
 import Image from "next/image";
 import { motion } from "motion/react";
-import Tempe from "@/public/events/tempe.png";
-import CollegeCup from "@/public/events/collegeCup.png";
-import BBLB from "@/public/events/bblb.png";
+import Tempe from "@/public/events/tempe.webp";
+import CollegeCup from "@/public/events/collegeCup.webp";
+import BBLB from "@/public/events/bblb.webp";
 
 const subHeaderAnimations = {
   initial: { opacity: 0.5, y: 10 },
