@@ -3,6 +3,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Calendar as UICalendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
+import { motion } from "motion/react";
+import Star from "@/public/4pointStar.svg";
+import InfoBox from "@/components/InfoBox";
+import UpcomingCard from "@/components/events/UpcomingCard";
+import Header from "@/components/Header";
+import EventsWave from "@/public/events/eventsWave.webp";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -107,22 +114,109 @@ const CalendarCall = () => {
   });
 
   return (
-    <div>
-      {isLoading || !data ? (
-        <div className="flex min-h-screen items-center justify-center">
-          Loading...
-        </div>
-      ) : (
-        <UICalendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="bg-rsd-dark-blue m-5 mx-auto w-11/12 rounded-4xl px-10 py-3 md:w-10/12"
-          events={data.allEvents.filter((event) =>
-            selectedEventTypes.includes(event.eventType),
-          )}
+    <div className="flex w-full max-w-screen flex-col items-center overflow-hidden">
+      <div className="flex w-full flex-col items-center">
+        <Header text="Upcoming Events" />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative flex w-full flex-col items-center"
+        >
+          <div className="mb-16 flex w-full flex-wrap justify-center gap-y-8 md:w-10/12">
+            {data?.futureEvents ? (
+              data.futureEvents
+                ?.filter((event: GoogleEventProps) => {
+                  if (!event || !event.start) return false;
+                  const startString = event.start.dateTime || event.start.date;
+                  if (!startString) return false;
+                  const eventDate = new Date(startString);
+                  const currentDate = new Date();
+                  return eventDate >= currentDate;
+                })
+                .slice(0, 3)
+                .map((event: GoogleEventProps, index: number) => {
+                  const startString = event.start.dateTime || event.start.date;
+                  const eventDate = startString ? new Date(startString) : null;
+                  return (
+                    <UpcomingCard
+                      key={index}
+                      name={event.summary || "Untitled Event"}
+                      month={
+                        eventDate
+                          ? eventDate.toLocaleDateString("en-US", {
+                              month: "long",
+                            })
+                          : ""
+                      }
+                      date={
+                        eventDate
+                          ? eventDate.toLocaleDateString("en-US", {
+                              day: "numeric",
+                            })
+                          : ""
+                      }
+                      desc={event.description || ""}
+                    />
+                  );
+                })
+            ) : (
+              <InfoBox
+                text={
+                  <p className="w-[70vw] text-center text-7xl text-white">
+                    No upcoming events.
+                  </p>
+                }
+              />
+            )}
+          </div>
+          <Image
+            src={EventsWave}
+            alt="Waves with Oars"
+            className="absolute bottom-0 -z-10 hidden w-screen object-fill md:-bottom-[13%] md:block"
+          />
+        </motion.div>
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="relative w-full"
+      >
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute top-35 left-22 hidden scale-70 rotate-10 sm:block"
         />
-      )}
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute top-37 left-40 hidden scale-30 rotate-10 sm:block"
+        />
+        <div className="mt-5 w-full md:mt-40">
+          {isLoading || !data ? (
+            <div className="flex min-h-screen items-center justify-center">
+              Loading...
+            </div>
+          ) : (
+            <UICalendar
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              className="bg-rsd-dark-blue m-5 mx-auto w-11/12 rounded-4xl px-10 py-3 md:w-10/12"
+              events={data.allEvents.filter((event) =>
+                selectedEventTypes.includes(event.eventType),
+              )}
+            />
+          )}
+        </div>
+        <Image
+          src={Star}
+          alt="Star"
+          className="absolute right-15 -bottom-10 hidden scale-30 rotate-20 sm:block"
+        />
+      </motion.div>
     </div>
   );
 };
