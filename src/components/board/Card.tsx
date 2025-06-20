@@ -52,7 +52,7 @@ const BoardCard = ({ name, role, image, email, instagram }: BoardCardProps) => {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link href={instagram}>
+          <Link href={instagram} target="_blank">
             <AiFillInstagram className="flex text-5xl text-white" />
           </Link>
         </motion.div>
