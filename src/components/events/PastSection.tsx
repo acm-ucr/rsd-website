@@ -2,7 +2,9 @@
 import { motion } from "motion/react";
 import PastCard from "@/components/events/PastCard";
 import Cloud from "@/public/cloud.webp";
-import logo from "@/public/RSDLogo.webp";
+import CollegeCup from "@/public/events/collegeCup.png";
+import Tempe from "@/public/events/tempe.png";
+import BBLB from "@/public/events/bblb.png";
 import Header from "@/components/Header";
 import Image from "next/image";
 
@@ -19,9 +21,9 @@ const PastSection = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         className="flex w-10/12 flex-col justify-center gap-10 md:w-11/12 md:flex-row md:[&>*:nth-child(even)]:mt-40"
       >
-        <PastCard eventName="eventName" image={logo} />
-        <PastCard eventName="eventName" image={logo} />
-        <PastCard eventName="eventName" image={logo} />
+        <PastCard eventName="College Cup" image={CollegeCup} />
+        <PastCard eventName="Tempe" image={Tempe} />
+        <PastCard eventName="Baby Long Beach" image={BBLB} />
       </motion.div>
       <motion.div
         transition={{

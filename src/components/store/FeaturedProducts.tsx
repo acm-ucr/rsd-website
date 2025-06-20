@@ -7,6 +7,8 @@ import storeWave from "@/public/store/storeWave.webp";
 import Cloud from "@/public/cloud.webp";
 import Link from "next/link";
 import Header from "@/components/Header";
+import Logo from "@/public/RSDLogo.webp";
+import Jersey from "@/public/store/Jersey1.jpg"
 
 const FeaturedProducts = () => {
   return (
@@ -18,9 +20,8 @@ const FeaturedProducts = () => {
         whileInView={{ opacity: 1, x: 0 }}
         className="flex flex-col items-center justify-center pb-4 lg:flex-row lg:pb-15"
       >
-        <Card productName="Jersey(men's)" productPrice="$17.99" />
-        <Card productName="Jersey(women's)" productPrice="$17.99" />
-        <Card productName="Jacket" productPrice="$29.99" />
+        <Card productName="Jersey" productPrice="$46.00" productImg={Jersey} />
+        <Card productName="Tank Top" productPrice="$40.00" productImg={Logo} />
       </motion.div>
       <div className="relative flex w-screen items-center justify-center pt-7.5 md:pb-[22vh]">
         <motion.div
@@ -74,7 +75,7 @@ const FeaturedProducts = () => {
           viewport={{ once: true }}
         >
           <Button className="font-rsd-alt bg-rsd-title-blue rounded-full p-10 text-center text-xl font-bold text-white hover:scale-110 hover:bg-blue-900 md:p-12 md:text-3xl lg:p-15 lg:text-5xl">
-            <Link href="/">order form!</Link>
+            <Link href="https://forms.gle/ND5J6C3FVt3jseaNA">order form!</Link>
           </Button>
         </motion.div>
       </div>
