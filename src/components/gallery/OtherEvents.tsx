@@ -2,8 +2,8 @@
 import GalleryCard from "./Card";
 import Image from "next/image";
 import wave from "@/public/wave.webp";
-import practices from "@/public/gallery/practice.jpg";
-import socials from "@/public/gallery/socials.jpg";
+import practices from "@/public/gallery/practice.webp";
+import socials from "@/public/gallery/socials.webp";
 import { motion } from "motion/react";
 
 const waveAnimation = {
