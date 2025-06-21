@@ -2,7 +2,8 @@
 import GalleryCard from "./Card";
 import Image from "next/image";
 import wave from "@/public/wave.webp";
-import logo from "@/public/RSDLogo.webp";
+import practices from "@/public/gallery/practice.jpg";
+import socials from "@/public/gallery/socials.jpg";
 import { motion } from "motion/react";
 
 const waveAnimation = {
@@ -34,12 +35,12 @@ const OtherEvents = () => {
           <GalleryCard
             photoName="Practices"
             link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
-            image={logo}
+            image={practices}
           />
           <GalleryCard
             photoName="Socials"
             link="https://photos.google.com/share/AF1QipMqGiMXsa4ibCJ_aR_lAOmBpNfLxbyMfgYF1nSDfr2fN6E1v0AJbAd8e97d-f2o7Q?key=VkpuWTVndEFPdHFYT09rNVQ5NGdfUk03UXp2alln"
-            image={logo}
+            image={socials}
           />
         </div>
       </div>
