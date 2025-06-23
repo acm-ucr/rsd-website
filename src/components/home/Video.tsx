@@ -7,7 +7,7 @@ const animationFadeIn = {
 
 const Video = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex w-full justify-center">
       <motion.div
         variants={animationFadeIn}
         initial="initial"

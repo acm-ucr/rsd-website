@@ -49,7 +49,7 @@ const GalleryPreview = () => {
         setApi={setApi}
         className="flex w-[90vw]"
       >
-        <CarouselContent className="relative w-[95vw]">
+        <CarouselContent className="relative w-full">
           {slides.map((slide: slide, index: number) => (
             <CarouselItem
               key={index}
