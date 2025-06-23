@@ -26,7 +26,12 @@ const GalleryCard = ({ photoName, link, image }: GalleryInfo) => {
         className="font-rsd-alt flex w-full flex-col drop-shadow-lg"
       >
         <div className="relative h-80 rounded-t-2xl bg-gray-200">
-          <Image className="object-cover" src={image} alt="product" fill />
+          <Image
+            className="rounded-t-2xl object-cover"
+            src={image}
+            alt="product"
+            fill
+          />
         </div>
         <div className="rounded-b-2xl bg-white p-2 text-center text-xl">
           {photoName}

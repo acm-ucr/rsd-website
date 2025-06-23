@@ -18,7 +18,7 @@ const paddleAnimations = {
   initial: { x: -50, rotateZ: -50 },
   animate: { x: 0, rotateZ: 0 },
   transition: { duration: 0.5 },
-  className: "absolute -top-40 left-30 -z-10 hidden w-145 xl:flex",
+  className: "absolute -top-40 -rotate-45 -left-20 -z-10 hidden w-145 md:flex",
 };
 const dragonAnimations = {
   initial: { opacity: 0.5 },
@@ -37,11 +37,11 @@ const QuarterlyRaces = () => {
       </motion.div>
 
       <motion.div {...paddleAnimations}>
-        <Image src={Paddle} alt="double paddle" className="relative" />
+        <Image src={Paddle} alt="double paddle" className="" />
       </motion.div>
 
       <motion.div {...dragonAnimations}>
-        <Image src={Dragon} alt="dragon" className="relative w-full" />
+        <Image src={Dragon} alt="dragon" className="w-full" />
       </motion.div>
 
       <div className="z-10 w-3/4 grid-cols-3 grid-rows-3 gap-15 space-y-10 py-10 md:grid md:space-y-0">

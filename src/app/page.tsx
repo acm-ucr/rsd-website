@@ -8,7 +8,7 @@ import Video from "@/components/home/Video";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Landing />
       <Video />
       <AwardsMapped />
