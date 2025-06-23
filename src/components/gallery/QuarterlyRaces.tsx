@@ -18,7 +18,7 @@ const paddleAnimations = {
   initial: { x: -50, rotateZ: -50 },
   animate: { x: 0, rotateZ: 0 },
   transition: { duration: 0.5 },
-  className: "absolute -top-40 left-30 -z-10 hidden w-145 2xl:flex",
+  className: "absolute -top-40 -rotate-45 -left-20 -z-10 hidden w-145 md:flex",
 };
 const dragonAnimations = {
   initial: { opacity: 0.5 },
